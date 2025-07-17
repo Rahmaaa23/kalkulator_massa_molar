@@ -240,8 +240,8 @@ def tampilkan_grid(baris):
     return None
     
 # Tampilkan grid
-for idx, baris in enumerate(grid):
-    tampilkan_baris(baris, f"baris_{idx}")
+for row_num, baris in enumerate(grid):
+    tampilkan_baris(baris, f"baris_{row_num}")
 
 # Lanthanida dan Aktinida
 st.markdown("### Lanthanida")
