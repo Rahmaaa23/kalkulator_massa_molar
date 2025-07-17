@@ -1,5 +1,25 @@
 import streamlit as st
 import re
+import streamlit as st
+
+st.set_page_config(layout="wide")
+
+# Sidebar
+halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik"])
+
+if halaman == "🏠 Beranda":
+    st.title("🧪 Kalkulator Kimia")
+    st.write("Selamat datang di aplikasi kalkulator kimia. Silakan pilih fitur di sidebar.")
+    st.image("https://i.imgur.com/Wy7UarW.png", use_container_width=True)
+
+elif halaman == "🧪 Kalkulator Massa Molar":
+    # Tempelkan seluruh bagian kalkulator massa molar Anda di sini
+    # (mulai dari definisi `massa_atom`, fungsi `hitung_massa_molar`, form input hingga hasil)
+    pass
+
+elif halaman == "🧬 Tabel Periodik":
+    # Tempelkan seluruh bagian grid tabel periodik Anda di sini
+    pass
 
 # Data massa atom relatif
 massa_atom = {
