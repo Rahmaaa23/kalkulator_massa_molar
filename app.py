@@ -136,10 +136,6 @@ def hitung_massa_molar(rumus):
 # UI Streamlit
 st.set_page_config(page_title="Kalkulator Massa Molar", page_icon="🧪")
 st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
-st.markdown("Masukkan rumus kimia (misal: `H2O`, `NaCl`, `C6H12O6`)")
-
-input_rumus = st.text_input("Rumus Kimia:")
-
 st.markdown("""
 <style>
 .big-font {
@@ -187,9 +183,3 @@ if submit:
                 unsafe_allow_html=True
             )
             
-if input_rumus:
-    hasil, error = hitung_massa_molar(input_rumus)
-    if error:
-        st.error(error)
-    else:
-        st.success(f"Massa molar dari {input_rumus} adalah {hasil:.3f} g/mol")
