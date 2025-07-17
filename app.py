@@ -130,6 +130,10 @@ if halaman == "🏠 Beranda":
     st.write("Selamat datang di aplikasi kalkulator kimia. Silakan pilih fitur di sidebar.")
     
 elif halaman == "tentang aplikasi":   
+
+# ===============================
+# PENJELASAN MASSA MOLAR
+# ===============================
 #gambar
 col1, col2 = st.columns([1, 2])
 with col1:
@@ -138,9 +142,6 @@ with col2:
     st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
     st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan. Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya. Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
 
-# ===============================
-# PENJELASAN MASSA MOLAR
-# ===============================
 with st.expander("📘 Apa itu Massa Molar?"):
     st.markdown("""
 **Massa molar** adalah massa satu mol suatu zat (unsur atau senyawa), biasanya dinyatakan dalam satuan gram per mol (g/mol).  
