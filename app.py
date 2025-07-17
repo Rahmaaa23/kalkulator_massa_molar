@@ -239,6 +239,18 @@ def tampilkan_grid(baris):
                     return el
     return None
     
+# Tampilkan grid
+for idx, baris in enumerate(grid):
+    tampilkan_baris(baris, f"baris_{idx}")
+
+# Lanthanida dan Aktinida
+st.markdown("### Lanthanida")
+tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
+
+st.markdown("### Aktinida")
+tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
+
+    
 
 # Tampilkan info simbol besar & massa atom
 if selected:
