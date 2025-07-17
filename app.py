@@ -15,6 +15,15 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+ .block-container {{
+        background-color: rgba(255, 255, 255, 0.65);
+        padding: 2rem;
+        border-radius: 10px;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # =========================
