@@ -240,7 +240,10 @@ def tampilkan_grid(baris):
     return None
 
 # Render utama
-selected_main = tampilkan_grid(main_table)
+# --- Tampilkan grid utama ---
+for i, row in enumerate(grid):
+    tampilkan_baris(row, f"main_{i}")
+    
 st.markdown("**Lanthanida**")
 selected_lanthanida = tampilkan_grid([lanthanida])
 st.markdown("**Aktinida**")
