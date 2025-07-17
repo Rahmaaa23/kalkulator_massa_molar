@@ -76,8 +76,7 @@ Di sini kamu dapat:
 # =========================
 elif halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
-    
- with st.expander("📘 Apa itu Massa Molar?"):
+    with st.expander("📘 Apa itu Massa Molar?"):
         st.markdown("""
 **Massa molar** adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
 """)
