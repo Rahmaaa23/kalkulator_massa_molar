@@ -1,69 +1,58 @@
 import streamlit as st
+import re
 
-# Massa atom dasar (bisa ditambah)
+# Data massa atom dasar (bisa ditambah)
 massa_atom = {
     "H": 1.008,
+    "He": 4.003,
+    "Li": 6.94,
+    "Be": 9.01,
+    "B": 10.81,
     "C": 12.01,
-    "O": 16.00,
-    "Na": 22.99,
-    "Cl": 35.45,
     "N": 14.01,
+    "O": 16.00,
+    "F": 18.998,
+    "Na": 22.99,
+    "Mg": 24.31,
+    "Al": 26.98,
+    "Si": 28.09,
+    "P": 30.97,
     "S": 32.07,
+    "Cl": 35.45,
     "K": 39.10,
-    "Ca": 40.08
+    "Ca": 40.08,
+    "Fe": 55.85,
+    "Cu": 63.55,
+    "Zn": 65.38
 }
 
-st.title("🧪 Kalkulator Kimia Sederhana")
+# Fungsi parsing rumus kimia sederhana
+def hitung_massa_molar(rumus):
+    pattern = r'([A-Z][a-z]*)(\d*)'
+    elemen = re.findall(pattern, rumus)
+    massa_total = 0
 
-# Navigasi
-menu = st.sidebar.selectbox("Pilih fitur kalkulator", (
-    "Massa Molar Unsur", 
-    "Konsentrasi Larutan", 
-    "pH Asam/Basa Kuat"
-))
+    for simbol, jumlah in elemen:
+        if simbol not in massa_atom:
+            return None, f"Unsur '{simbol}' tidak ditemukan dalam database."
+        n = int(jumlah) if jumlah else 1
+        massa_total += massa_atom[simbol] * n
 
-# ========== Fitur 1: Massa Molar Unsur ==========
-if menu == "Massa Molar Unsur":
-    st.header("🔬 Massa Molar Unsur")
-    unsur = st.text_input("Masukkan simbol unsur (misal: Na, Cl, O):").capitalize()
-    jumlah = st.number_input("Jumlah atom unsur", min_value=1, step=1)
+    return massa_total, None
 
-    if unsur in massa_atom:
-        massa_total = massa_atom[unsur] * jumlah
-        st.success(f"Massa molar dari {jumlah} atom {unsur} = {massa_total:.2f} g/mol")
-    elif unsur:
-        st.error("Unsur tidak ditemukan dalam database.")
+# UI Streamlit
+st.set_page_config(page_title="Kalkulator Massa Molar", page_icon="🧪")
+st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
+st.markdown("Masukkan rumus kimia (misal: `H2O`, `NaCl`, `C6H12O6`)")
 
-# ========== Fitur 2: Konsentrasi Larutan ==========
-elif menu == "Konsentrasi Larutan":
-    st.header("💧 Konsentrasi Larutan (Molaritas)")
-    mol = st.number_input("Jumlah mol zat (mol)", min_value=0.0, step=0.01)
-    volume = st.number_input("Volume larutan (liter)", min_value=0.0001, step=0.01)
+input_rumus = st.text_input("Rumus Kimia:")
 
-    if volume > 0:
-        M = mol / volume
-        st.success(f"Konsentrasi larutan = {M:.3f} M")
+if input_rumus:
+    hasil, error = hitung_massa_molar(input_rumus)
+    if error:
+        st.error(error)
     else:
-        st.warning("Volume tidak boleh nol.")
+        st.success(f"Massa molar dari {input_rumus} adalah {hasil:.3f} g/mol")
 
-# ========== Fitur 3: pH Asam/Basa Kuat ==========
-elif menu == "pH Asam/Basa Kuat":
-    st.header("🧪 Perhitungan pH (Asam/Basa Kuat)")
-    jenis = st.selectbox("Pilih jenis larutan", ["Asam kuat", "Basa kuat"])
-    konsentrasi = st.number_input("Konsentrasi larutan (M)", min_value=0.0, step=0.01)
-
-    import math
-    if konsentrasi > 0:
-        if jenis == "Asam kuat":
-            pH = -math.log10(konsentrasi)
-            st.success(f"pH = {pH:.2f}")
-        else:
-            pOH = -math.log10(konsentrasi)
-            pH = 14 - pOH
-            st.success(f"pH = {pH:.2f}")
-    elif konsentrasi == 0:
-        st.info("Larutan netral → pH = 7")
-
-# Footer
 st.markdown("---")
-st.caption("Dibuat dengan ❤️ menggunakan Streamlit | Versi sederhana")
+st.caption("Versi sederhana | Dibuat dengan ❤️ oleh Streamlit")
