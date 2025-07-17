@@ -163,7 +163,7 @@ def tampilkan_baris(baris, baris_id):
     tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
 
     st.markdown("### Aktinida")
-    tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")tolong perkecil ukurannya jangan full layar dan enak dilihat
+    tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
 
     if st.session_state.selected:
         sim = st.session_state.selected
