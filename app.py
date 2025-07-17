@@ -148,54 +148,37 @@ elif halaman == "🧬 Tabel Periodik":
 # HALAMAN DASAR TEORI
 # =========================
 elif halaman == "🏠 Beranda":
-    st.title("🧪 Aplikasi Kimia Interaktif")
-    st.markdown("""
-Berikut adalah penjelasan **dasar teori tentang massa molar** pada unsur dan senyawa, disajikan secara ringkas dan ilmiah:
-
----
-
-### **Dasar Teori Massa Molar**
-
-**Massa molar** adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan **gram per mol (g/mol)**. Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung **6,022 × 10²³ partikel (atom, ion, atau molekul)**.
-
-#### ✅ **Pada Unsur**
-
-Massa molar unsur sama dengan **massa atom relatif (Ar)** dalam satuan gram/mol. Misalnya:
-
-* Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = **1,008 g/mol**
-* Karbon (C) memiliki Ar = 12,011 → massa molarnya = **12,011 g/mol**
-
-Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
-
-#### ✅ **Pada Senyawa**
-
-Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
-
-* **Air (H₂O):**
+    st.title("**Dasar Teori Massa Molar**")
+    st.markdown(""" 
+    **Massa molar** adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan **gram per mol (g/mol)**. Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung **6,022 × 10²³ partikel (atom, ion, atau molekul)**.
+    #### ✅ **Pada Unsur**
+    Massa molar unsur sama dengan **massa atom relatif (Ar)** dalam satuan gram/mol. Misalnya:
+    * Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = **1,008 g/mol**
+    * Karbon (C) memiliki Ar = 12,011 → massa molarnya = **12,011 g/mol**
+    Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
+    #### ✅ **Pada Senyawa**
+    Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
+    * **Air (H₂O):**
 
   * 2 atom H × 1,008 = 2,016
   * 1 atom O × 15,999 = 15,999
   * Total massa molar = **18,015 g/mol**
-
-* **Karbon dioksida (CO₂):**
+  
+  * **Karbon dioksida (CO₂):**
 
   * 1 atom C × 12,011 = 12,011
   * 2 atom O × 15,999 = 31,998
   * Total massa molar = **44,009 g/mol**
-
-Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
-
----
-
-###🔍 Pentingnya Massa Molar
-
-Massa molar digunakan untuk:
-
-* Mengonversi antara **jumlah mol dan massa** dalam gram.
-* Menghitung **pereaksi dan hasil** dalam reaksi kimia.
-* Analisis laboratorium dan preparasi larutan.
-
-""")
+  Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
+  ---
+  
+  ###🔍 Pentingnya Massa Molar
+  Massa molar digunakan untuk:
+  
+  * Mengonversi antara **jumlah mol dan massa** dalam gram.
+  * Menghitung **pereaksi dan hasil** dalam reaksi kimia.
+  * Analisis laboratorium dan preparasi larutan.
+  """)
 
 # =========================
 # HALAMAN TENTANG
