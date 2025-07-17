@@ -18,7 +18,7 @@ st.markdown(
 .block-container {
         background-color: rgba(255, 255, 255, 0.75); /* putih semi-transparan untuk konten */
         padding: 2 rem;
-        border-radius: 12px;
+        border-radius: 12 px;
     }
     </style>
     """,
