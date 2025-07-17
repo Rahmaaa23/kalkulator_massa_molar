@@ -1,6 +1,22 @@
 import streamlit as st
 import re
 
+# Tambahkan latar belakang
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("https://mmc.tirto.id/image/2021/07/05/istock-1208824917_ratio-16x9.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # =========================
 # DATA MASSA ATOM RELATIF
 # =========================
