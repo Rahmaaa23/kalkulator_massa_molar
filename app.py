@@ -168,7 +168,7 @@ with col1:
 with col2:
     st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
     st.write("Aplikasi ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan.")
-   st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
+    st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
 
 # ===============================
 # PENJELASAN MASSA MOLAR
