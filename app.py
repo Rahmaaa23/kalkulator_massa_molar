@@ -121,8 +121,6 @@ massa_atom = {
 # Navigasi
 menu = st.sidebar.selectbox("Pilih fitur kalkulator", (
     "Massa Molar Unsur", 
-    "Konsentrasi Larutan", 
-    "pH Asam/Basa Kuat"
 ))
 
 # ========== Fitur 1: Massa Molar Unsur ==========
