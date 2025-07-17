@@ -189,7 +189,10 @@ with st.expander("📘 Bagaimana cara mencari massa molar?"):
 
 """)
 
-
+elif halaman == "🧪 Kalkulator Massa Molar":
+    st.title("🧪 Kalkulator Massa Molar")
+    st.write("Masukkan rumus senyawa untuk menghitung massa molarnya.")
+    # Tambahkan kode kalkulator kamu di sini
 
 # Fungsi parsing rumus kimia sederhana
 def hitung_massa_molar(rumus):
@@ -254,6 +257,10 @@ if submit:
 
 
     
+elif halaman == "🧬 Tabel Periodik":
+    st.title("🧬 Tabel Periodik Interaktif")
+    st.write("Klik unsur untuk melihat massa atom relatifnya.")
+    # Tambahkan kode tabel periodik kamu di sini
 
 
 
@@ -346,3 +353,17 @@ if st.session_state.selected:
     ar = massa_atom.get(sim, "Tidak ditemukan")
     st.success(f"**{sim}** → Ar = **{ar}**")
     st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+
+elif halaman == "ℹ️ Tentang Aplikasi":
+    st.title("ℹ️ Tentang Aplikasi")
+    st.markdown("""
+    Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik.
+
+    **Fitur**:
+    - Kalkulator Massa Molar
+    - Tabel Periodik Interaktif
+    - Tampilan yang mendukung perangkat mobile
+
+    Dibuat oleh: *[Namamu di sini]*  
+    Sumber data: IUPAC, PubChem, dan tabel periodik modern
+    """)
