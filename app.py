@@ -270,15 +270,14 @@ st.markdown("Klik salah satu unsur untuk menampilkan Ar-nya (massa atom relatif)
 
 # Fungsi tampilkan baris
 def tampilkan_baris(baris, baris_id):
-    for baris in tabel_periodik:
-    cols = st.columns([0.25] * len(baris))  # Lebih kecil agar pas layar HP
-    for i, simbol in enumerate(baris):
-        if simbol:
-            if cols[i].button(simbol, key=f"{simbol}_{i}"):
-                st.success(f"Simbol: {simbol} — [Tampilkan data Ar, nama, dll]")
+    cols = st.columns(0.25)
+    for i in range(0.25):
+        elemen = baris[i] if i < len(baris) else ""
+        if elemen:
+            if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
+                st.session_state.selected = elemen
         else:
-            cols[i].markdown(" ")
-
+            cols[i].markdown("")
 # Tampilkan seluruh baris
 for baris_index, baris in enumerate(grid):
     # tambahkan padding kosong jika kurang dari 18
