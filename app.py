@@ -202,11 +202,7 @@ if submit:
                 unsafe_allow_html=True
             )
 
-import streamlit as st
-# Halaman Streamlit
-st.set_page_config("Tabel Periodik Interaktif", page_icon="🧪", layout="wide")
-st.title("🧪 Tabel Periodik Interaktif")
-st.caption("Klik simbol unsur untuk melihat massa atom relatif (Ar) dalam g/mol.")
+
 
 import streamlit as st
 
@@ -250,7 +246,7 @@ if "selected" not in st.session_state:
     st.session_state.selected = None
 
 st.set_page_config(layout="wide")
-st.title("🔬 Tabel Periodik Interaktif")
+st.title("🔬 Tabel Periodik")
 st.markdown("Klik salah satu unsur untuk menampilkan Ar-nya (massa atom relatif).")
 
 # Fungsi tampilkan baris
