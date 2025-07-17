@@ -26,7 +26,7 @@ st.markdown(
 massa_atom = {
     "H": 1.008, "He": 4.0026, "Li": 6.94, "Be": 9.0122, "B": 10.81, "C": 12.01, "N": 14.01,
     "O": 16.00, "F": 18.998, "Ne": 20.18, "Na": 22.99,…
-[00.51, 18/7/2025] Rahma: def tampilkan_baris(baris, baris_id):
+def tampilkan_baris(baris, baris_id):
     cols = st.columns(18)
     for i in range(18):
         elemen = baris[i] if i < len(baris) else ""
