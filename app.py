@@ -239,11 +239,6 @@ def tampilkan_grid(baris):
                     return el
     return None
     
-st.markdown("**Lanthanida**")
-selected_lanthanida = tampilkan_grid([lanthanida])
-st.markdown("**Aktinida**")
-selected_aktinida = tampilkan_grid([aktinida])
-
 # Unsur terpilih
 selected = selected_main or selected_lanthanida or selected_aktinida
 
