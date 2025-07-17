@@ -239,8 +239,6 @@ def tampilkan_grid(baris):
                     return el
     return None
     
-# Unsur terpilih
-selected = selected_main or selected_lanthanida or selected_aktinida
 
 # Tampilkan info simbol besar & massa atom
 if selected:
