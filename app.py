@@ -120,41 +120,17 @@ elif halaman == "🧬 Tabel Periodik":
     if "selected" not in st.session_state:
         st.session_state.selected = None
 
-def tampilkan_baris(baris, baris_id):
-    cols = st.columns(18)
-    for i in range(18):
-        elemen = baris[i] if i < len(baris) else ""
-        if elemen:
-            with cols[i]:
-                st.markdown(
-                    f"""
-                    <style>
-                    .element-button {{
-                        font-size: 12px;
-                        padding: 6px 2px;
-                        width: 100%;
-                        height: 45px;
-                        background-color: #f0f0f0;
-                        border-radius: 6px;
-                        border: 1px solid #ccc;
-                        text-align: center;
-                    }}
-                    </style>
-                    """, unsafe_allow_html=True
-                )
-                if st.button(elemen, key=f"{baris_id}_{i}_{elemen}"):
+
+                     
+   def tampilkan_baris(baris, baris_id):
+            cols = st.columns(18)
+        for i in range(18):
+            elemen = baris[i] if i < len(baris) else ""
+            if elemen:
+                if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
                     st.session_state.selected = elemen
-        else:
-            cols[i].markdown("")
-
-    for idx, baris in enumerate(grid):
-        tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
-
-    st.markdown("### Lanthanida")
-    tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
-
-    st.markdown("### Aktinida")
-    tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
+            else:
+                cols[i].markdown("")
 
     if st.session_state.selected:
         sim = st.session_state.selected
