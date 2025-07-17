@@ -135,7 +135,7 @@ halaman = st.sidebar.radio("📌 Navigasi", [
 if halaman == "🏠 Beranda":
     st.title("🏠 Beranda")
     st.write("Selamat datang di **Aplikasi Kalkulator Kimia Interaktif**. Gunakan menu di sidebar untuk berpindah halaman.")
-    st.image("https://i.imgur.com/Wy7UarW.png", use_container_width=True)
+    st.image("https://png.pngtree.com/element_pic/00/16/08/2157b970f63d277.jpg", use_container_width=True)
 
 elif halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar")
