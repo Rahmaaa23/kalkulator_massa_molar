@@ -305,7 +305,7 @@ if st.session_state.selected:
 elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi")
     st.markdown("""
-    Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik.
+    Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik. """)
     #gambar
 col1, col2 = st.columns([1, 2])
 with col1:
