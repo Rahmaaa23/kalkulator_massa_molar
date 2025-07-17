@@ -118,13 +118,7 @@ massa_atom = {
     "No": 259.00,
     "Lr": 266.00
 }
-# Sidebar Navigasi
-st.sidebar.title("🔬 Menu Navigasi")
-page = st.sidebar.radio("Pilih Halaman", ["Beranda", "Massa Molar Unsur"])
 
-# ========== Fitur 1: Massa Molar Unsur ==========
-if menu == "Massa Molar Unsur":
-    st.header("🔬 Massa Molar Unsur")
 
 # Fungsi parsing rumus kimia sederhana
 def hitung_massa_molar(rumus):
