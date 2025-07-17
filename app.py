@@ -224,45 +224,42 @@ aktinida = [""] * 3 + ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es"
 
 selected = None
 
-# Fungsi untuk menampilkan grid periodik
-def tampilkan_grid(grid):
-    for row in grid:
+# Variabel penyimpanan
+selected = None
+
+# Fungsi menampilkan grid
+def tampilkan_grid(baris):
+    for row in baris:
         cols = st.columns(len(row))
-        for i, simbol in enumerate(row):
-            if simbol == "":
-                cols[i].write(" ")
+        for i, el in enumerate(row):
+            if el == "":
+                cols[i].markdown(" ")
             else:
-                if cols[i].button(simbol):
-                    return simbol
+                if cols[i].button(el):
+                    return el
     return None
 
-# Tampilkan grid utama
-pilih_main = tampilkan_grid(periodik_main)
+# Render utama
+selected_main = tampilkan_grid(main_table)
+st.markdown("**Lanthanida**")
+selected_lanthanida = tampilkan_grid([lanthanida])
+st.markdown("**Aktinida**")
+selected_aktinida = tampilkan_grid([aktinida])
 
-# Separator
-st.markdown(" ")
-st.markdown("**▶ Lanthanida dan Aktinida**")
+# Unsur terpilih
+selected = selected_main or selected_lanthanida or selected_aktinida
 
-# Tampilkan baris lanthanida dan aktinida
-with st.container():
-    st.markdown("**Lanthanida**")
-    pilih_lanth = tampilkan_grid([lanthanida])
-    st.markdown("**Aktinida**")
-    pilih_aktin = tampilkan_grid([aktinida])
-
-# Cek unsur yang dipilih
-selected = pilih_main or pilih_lanth or pilih_aktin
-
-# Tampilkan info massa atom
+# Tampilkan info simbol besar & massa atom
 if selected:
-    ar = massa_atom.get(selected)
-    if ar:
-        st.success(f"**{selected}** → Massa atom relatif (Ar) = **{ar} g/mol**")
-    else:
-        st.warning(f"Massa atom untuk {selected} belum tersedia.")
+    ar = massa_atom.get(selected, "Tidak diketahui")
+    st.markdown("---")
+    st.markdown(f"""
+    <div style='text-align: center; padding: 2rem; border: 2px solid #CCC; border-radius: 15px; background-color: #f9f9f9;'>
+        <div style='font-size: 96px; font-weight: bold; color: #333;'>{selected}</div>
+        <div style='font-size: 24px;'>Massa Atom Relatif (Ar): <strong>{ar} g/mol</strong></div>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Gambar tabel periodik (opsional)
-st.markdown("---")
-st.markdown("### 📷 Gambar Tabel Periodik Referensi")
-st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.swarawarta.co.id%2F2024%2F03%2Ftabel-periodik-hd-pdf-dan-pembahasannya.html&psig=AOvVaw2foOZMA_5alhZZdrtMIiSc&ust=1752846010136000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKiV5qaCxI4DFQAAAAAdAAAAABAj", caption="Tabel periodik kimia")
-
+st.markdown("### 📷 Gambar Referensi Tabel Periodik")
+st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.swarawarta.co.id%2F2024%2F03%2Ftabel-periodik-hd-pdf-dan-pembahasannya.html&psig=AOvVaw2foOZMA_5alhZZdrtMIiSc&ust=1752846010136000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKiV5qaCxI4DFQAAAAAdAAAAABAj", use_column_width=True)
