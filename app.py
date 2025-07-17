@@ -67,11 +67,6 @@ Di sini kamu dapat:
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
   
-    with st.expander("📘 Apa itu Massa Molar?"):
-        st.markdown("""
-**Massa molar** adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
-""")
-       
    
 
 
@@ -81,7 +76,12 @@ Di sini kamu dapat:
 # =========================
 elif halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
-
+    
+ with st.expander("📘 Apa itu Massa Molar?"):
+        st.markdown("""
+**Massa molar** adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
+""")
+       
 
 Contoh:
 - H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ **18.015 g/mol**
