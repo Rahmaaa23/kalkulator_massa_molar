@@ -1,7 +1,7 @@
 import streamlit as st
 import re
 
-# Data massa atom dasar (bisa ditambah)
+# Data massa atom relatif
 massa_atom = {
     "H": 1.008,
     "Li": 6.94,
@@ -140,6 +140,53 @@ st.markdown("Masukkan rumus kimia (misal: `H2O`, `NaCl`, `C6H12O6`)")
 
 input_rumus = st.text_input("Rumus Kimia:")
 
+st.markdown("""
+<style>
+.big-font {
+    font-size:32px !important;
+    color: #4CAF50;
+}
+.result-box {
+    padding: 1.2em;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    border-left: 6px solid #4CAF50;
+    font-size: 18px;
+}
+.error-box {
+    padding: 1.2em;
+    background-color: #ffebee;
+    border-radius: 10px;
+    border-left: 6px solid #f44336;
+    font-size: 18px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Judul
+st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa Kimia</div>', unsafe_allow_html=True)
+st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
+
+# Form input
+with st.form("form_kimia"):
+    rumus = st.text_input("Rumus Kimia", placeholder="Contoh: H2O, NaCl, CH3COOH")
+    submit = st.form_submit_button("Hitung Massa Molar")
+
+# Hasil
+if submit:
+    if rumus.strip() == "":
+        st.warning("Silakan masukkan rumus senyawa terlebih dahulu.")
+    else:
+        hasil, error = hitung_massa_molar(rumus.strip())
+        if error:
+            st.markdown(f'<div class="error-box">❌ {error}</div>', unsafe_allow_html=True)
+        else:
+            st.markdown(
+                f'<div class="result-box">✅ Massa molar dari <strong>{rumus}</strong> adalah '
+                f'<strong>{hasil:.3f} g/mol</strong>.</div>', 
+                unsafe_allow_html=True
+            )
+            
 if input_rumus:
     hasil, error = hitung_massa_molar(input_rumus)
     if error:
