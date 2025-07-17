@@ -73,7 +73,7 @@ Di sini kamu dapat:
 """)
         with st.expander("📘 Bagaimana cara mencari massa molar?"):    
     st.markdown("""
-**Massa molar** senyawa dihitung dengan menjumlahkan massa atom relatif (Ar) tiap unsur dikalikan jumlah atomnya. Misalnya pada H₂O: hidrogen (Ar = 1) ada 2 atom, sehingga totalnya 2 × 1 = 2; oksigen (Ar = 16) ada 1 atom, jadi 1 × 16 = 16. Maka, massa molar H₂O adalah 2 + 16 = **18 g/mol**.
+**Massa molar** senyawa dihitung dengan menjumlahkan massa atom relatif (Ar) tiap unsur dikalikan jumlah atomnya. Misalnya pada H2O: hidrogen (Ar = 1) ada 2 atom, sehingga totalnya 2 x 1 = 2; oksigen (Ar = 16) ada 1 atom, jadi 1 x 16 = 16. Maka, massa molar H2O adalah 2 + 16 = **18 g/mol**.
 """)
    
 
