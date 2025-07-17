@@ -48,13 +48,14 @@ massa_atom = {
 # =========================
 st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
 
-halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "ℹ️ Tentang Aplikasi"])
+halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
+
 
 # =========================
-# HALAMAN BERANDA
+# HALAMAN KALKULATOR
 # =========================
-if halaman == "🏠 Beranda":
-    st.title("🧪 Aplikasi Kimia Interaktif")
+elif halaman == "🧪 Kalkulator Massa Molar":
+    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
     st.markdown("""
 Selamat datang di **Aplikasi Kimia Interaktif** berbasis Streamlit!  
 Di sini kamu dapat:
@@ -63,12 +64,6 @@ Di sini kamu dapat:
 - Menelusuri **tabel periodik interaktif**  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
-
-# =========================
-# HALAMAN KALKULATOR
-# =========================
-elif halaman == "🧪 Kalkulator Massa Molar":
-    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
 
     with st.expander("📘 Apa itu Massa Molar?"):
         st.markdown("""
@@ -149,6 +144,58 @@ elif halaman == "🧬 Tabel Periodik":
         ar = massa_atom.get(sim, "Tidak ditemukan")
         st.success(f"**{sim}** → Ar = **{ar}**")
         st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+# =========================
+# HALAMAN DASAR TEORI
+# =========================
+if halaman == "🏠 Beranda":
+    st.title("🧪 Aplikasi Kimia Interaktif")
+    st.markdown("""
+Berikut adalah penjelasan **dasar teori tentang massa molar** pada unsur dan senyawa, disajikan secara ringkas dan ilmiah:
+
+---
+
+### **Dasar Teori Massa Molar**
+
+**Massa molar** adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan **gram per mol (g/mol)**. Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung **6,022 × 10²³ partikel (atom, ion, atau molekul)**.
+
+#### ✅ **Pada Unsur**
+
+Massa molar unsur sama dengan **massa atom relatif (Ar)** dalam satuan gram/mol. Misalnya:
+
+* Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = **1,008 g/mol**
+* Karbon (C) memiliki Ar = 12,011 → massa molarnya = **12,011 g/mol**
+
+Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
+
+#### ✅ **Pada Senyawa**
+
+Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
+
+* **Air (H₂O):**
+
+  * 2 atom H × 1,008 = 2,016
+  * 1 atom O × 15,999 = 15,999
+  * Total massa molar = **18,015 g/mol**
+
+* **Karbon dioksida (CO₂):**
+
+  * 1 atom C × 12,011 = 12,011
+  * 2 atom O × 15,999 = 31,998
+  * Total massa molar = **44,009 g/mol**
+
+Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
+
+---
+
+###🔍 Pentingnya Massa Molar
+
+Massa molar digunakan untuk:
+
+* Mengonversi antara **jumlah mol dan massa** dalam gram.
+* Menghitung **pereaksi dan hasil** dalam reaksi kimia.
+* Analisis laboratorium dan preparasi larutan.
+
+""")
 
 # =========================
 # HALAMAN TENTANG
