@@ -1,19 +1,17 @@
 import streamlit as st
 import re
-
-# Tambahkan latar belakang
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://mmc.tirto.id/image/2021/07/05/istock-1208824917_ratio-16x9.jpg");
+        background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftirto.id%2Fmengenal-senyawa-organik-dalam-kimia-ciri-ciri-dan-contohnya-go56&psig=AOvVaw0od-RIjIgIAO2JpC-VMVu8&ust=1752857705535000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDBu_CtxI4DFQAAAAAdAAAAABAE");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
 
     .block-container {
-        background-color: rgba(255, 255, 255, 0.60); /* putih semi-transparan untuk konten */
+        background-color: rgba(255, 255, 255, 0.65); /* putih semi-transparan untuk konten */
         padding: 2rem;
         border-radius: 12px;
     }
@@ -21,7 +19,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 
 # =========================
 # DATA MASSA ATOM RELATIF
@@ -57,30 +54,26 @@ halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa M
 # HALAMAN BERANDA
 # =========================
 if halaman == "🏠 Beranda":
-    st.title("🧪 Aplikasi Kimia")
+    st.title("🧪 Aplikasi Kimia Interaktif")
+    st.image("https://images.unsplash.com/photo-1605810230434-7631ac76ec94", use_column_width=True)
     st.markdown("""
-Selamat datang di **Aplikasi Kimia** berbasis Streamlit!  
+Selamat datang di **Aplikasi Kimia Interaktif** berbasis Streamlit!  
 Di sini kamu dapat:
 
 - Menghitung **massa molar** senyawa kimia  
 - Menelusuri **tabel periodik interaktif**  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
-  
-   
-
-
 
 # =========================
 # HALAMAN KALKULATOR
 # =========================
 elif halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
+
     with st.expander("📘 Apa itu Massa Molar?"):
         st.markdown("""
 **Massa molar** adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
-""")
-       
 
 Contoh:
 - H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ **18.015 g/mol**
