@@ -54,7 +54,7 @@ halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Ta
 # =========================
 # HALAMAN KALKULATOR
 # =========================
-elif halaman == "🧪 Kalkulator Massa Molar":
+if halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
     st.markdown("""
 Selamat datang di **Aplikasi Kimia Interaktif** berbasis Streamlit!  
@@ -147,7 +147,7 @@ elif halaman == "🧬 Tabel Periodik":
 # =========================
 # HALAMAN DASAR TEORI
 # =========================
-if halaman == "🏠 Beranda":
+elif halaman == "🏠 Beranda":
     st.title("🧪 Aplikasi Kimia Interaktif")
     st.markdown("""
 Berikut adalah penjelasan **dasar teori tentang massa molar** pada unsur dan senyawa, disajikan secara ringkas dan ilmiah:
