@@ -161,8 +161,6 @@ st.markdown("""
 
 # Judul
 st.markdown('<div class="big-font">Kalkulator Massa Molar Senyawa Kimia</div>', unsafe_allow_html=True)
-import streamlit as st
-st.image("unsur kimia.jpg", caption="unsur kimia")
 st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
 
 # Form input
