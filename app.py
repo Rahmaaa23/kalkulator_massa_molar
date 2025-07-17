@@ -334,10 +334,4 @@ with st.expander("📘 Bagaimana cara mencari massa molar?"):
 """)
 
 
-    **Fitur**:
-    - Kalkulator Massa Molar
-    - Tabel Periodik Interaktif
-    - Tampilan yang mendukung perangkat mobile
-
-    Dibuat oleh: *[Namamu di sini]*  
-    Sumber data: IUPAC, PubChem, dan tabel periodik modern
+  
