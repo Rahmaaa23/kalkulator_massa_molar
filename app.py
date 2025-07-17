@@ -66,10 +66,11 @@ Di sini kamu dapat:
 - Menelusuri **tabel periodik interaktif**  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
-     with st.expander("📘 Apa itu Massa Molar?"):
+    with st.expander("📘 Apa itu Massa Molar?"):
         st.markdown("""
 **Massa molar** adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
-    with st.expander("📘 Bagaimana cara mencari massa molar?"):
+
+with st.expander("📘 Bagaimana cara mencari massa molar?"):
         st.markdown("""
 **Massa molar** senyawa dihitung dengan menjumlahkan massa atom relatif (Ar) tiap unsur dikalikan jumlah atomnya. Misalnya pada H₂O: hidrogen (Ar = 1) ada 2 atom, sehingga totalnya 2 × 1 = 2; oksigen (Ar = 16) ada 1 atom, jadi 1 × 16 = 16. Maka, massa molar H₂O adalah 2 + 16 = **18 g/mol**.
 
