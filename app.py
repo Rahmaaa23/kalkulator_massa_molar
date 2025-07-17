@@ -322,7 +322,7 @@ with st.expander("📘 Apa itu Massa Molar?"):
     st.markdown("""
 **Massa molar** adalah massa satu mol suatu zat (unsur atau senyawa), biasanya dinyatakan dalam satuan gram per mol (g/mol).  
 Contohnya:
-- Massa molar air (H₂O) adalah sekitar 18.02 g/mol
+- Massa molar air (H2O) adalah sekitar 18.02 g/mol
 - Massa molar natrium klorida (NaCl) adalah sekitar 58.44 g/mol
 
 Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
