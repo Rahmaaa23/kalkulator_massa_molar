@@ -119,17 +119,56 @@ massa_atom = {
     "Lr": 266.00
 }
 import streamlit as st
+import streamlit as st
 
 st.set_page_config(layout="wide")
 
-# Sidebar
-halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik" "tentang aplikasi"])
+# Sidebar Navigasi
+halaman = st.sidebar.radio("📌 Navigasi", [
+    "🏠 Beranda", 
+    "🧪 Kalkulator Massa Molar", 
+    "🧬 Tabel Periodik", 
+    "ℹ️ Tentang Aplikasi"
+])
 
+# Konten Tiap Halaman
 if halaman == "🏠 Beranda":
-    st.title("🧪 Kalkulator Kimia")
-    st.write("Selamat datang di aplikasi kalkulator kimia. Silakan pilih fitur di sidebar.")
-    
-elif halaman == "tentang aplikasi":   
+    st.title("🏠 Beranda")
+    st.write("Selamat datang di **Aplikasi Kalkulator Kimia Interaktif**. Gunakan menu di sidebar untuk berpindah halaman.")
+    st.image("https://i.imgur.com/Wy7UarW.png", use_container_width=True)
+
+elif halaman == "🧪 Kalkulator Massa Molar":
+    st.title("🧪 Kalkulator Massa Molar")
+    st.write("Masukkan rumus senyawa untuk menghitung massa molarnya.")
+    # Tambahkan kode kalkulator kamu di sini
+
+elif halaman == "🧬 Tabel Periodik":
+    st.title("🧬 Tabel Periodik Interaktif")
+    st.write("Klik unsur untuk melihat massa atom relatifnya.")
+    # Tambahkan kode tabel periodik kamu di sini
+
+elif halaman == "ℹ️ Tentang Aplikasi":
+    st.title("ℹ️ Tentang Aplikasi")
+    st.markdown("""
+    Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik.
+
+    **Fitur**:
+    - Kalkulator Massa Molar
+    - Tabel Periodik Interaktif
+    - Tampilan yang mendukung perangkat mobile
+
+    Dibuat oleh: *[Namamu di sini]*  
+    Sumber data: IUPAC, PubChem, dan tabel periodik modern
+    """)
+
+
+#gambar
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVx1ePJuorDta4eJJvcLPiKPyvGLUFU2PFIznnQqQ5ghkbeiGO8ssJxHu64vbv0IoVvfo&usqp=CAU", use_container_width=True)
+with col2:
+    st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
+    st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan. Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya. Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
 
 # ===============================
 # PENJELASAN MASSA MOLAR
@@ -150,10 +189,7 @@ with st.expander("📘 Bagaimana cara mencari massa molar?"):
 
 """)
 
-elif halaman == "🧪 Kalkulator Massa Molar":
-    # Tempelkan seluruh bagian kalkulator massa molar Anda di sini
-    # (mulai dari definisi `massa_atom`, fungsi `hitung_massa_molar`, form input hingga hasil)
-    pass
+
 
 # Fungsi parsing rumus kimia sederhana
 def hitung_massa_molar(rumus):
@@ -220,9 +256,7 @@ if submit:
     
 
 
-elif halaman == "🧬 Tabel Periodik":
-    # Tempelkan seluruh bagian grid tabel periodik Anda di sini
-    pass
+
     
 import streamlit as st
 
