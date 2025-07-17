@@ -3,19 +3,25 @@ import re
 
 # Tambahkan latar belakang
 st.markdown(
-    f"""
+    """
     <style>
-    .stApp {{
+    .stApp {
         background-image: url("https://mmc.tirto.id/image/2021/07/05/istock-1208824917_ratio-16x9.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-    }}
+    }
+
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.85); /* putih semi-transparan untuk konten */
+        padding: 2rem;
+        border-radius: 12px;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
-background-color: rgba(255, 255, 255, 0.85);
+
 
 # =========================
 # DATA MASSA ATOM RELATIF
