@@ -13,7 +13,7 @@ st.markdown(
     }
 
     .block-container {
-        background-color: rgba(255, 255, 255, 0.40); /* putih semi-transparan untuk konten */
+        background-color: rgba(255, 255, 255, 0.60); /* putih semi-transparan untuk konten */
         padding: 2rem;
         border-radius: 12px;
     }
