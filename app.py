@@ -341,4 +341,3 @@ with st.expander("📘 Bagaimana cara mencari massa molar?"):
 
     Dibuat oleh: *[Namamu di sini]*  
     Sumber data: IUPAC, PubChem, dan tabel periodik modern
-    """)
