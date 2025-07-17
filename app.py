@@ -212,6 +212,18 @@ if submit:
 
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
+st.markdown("""
+    <style>
+    button[kind="secondary"] {
+        font-size: 10px !important;
+        padding: 3px 4px !important;
+        height: auto !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 # Dictionary Ar unsur (massa atom relatif)
 massa_atom = {
     "H": 1.008, "He": 4.0026, "Li": 6.94, "Be": 9.0122, "B": 10.81, "C": 12.01, "N": 14.01,
@@ -255,16 +267,17 @@ st.set_page_config(layout="wide")
 st.title("🔬 Tabel Periodik")
 st.markdown("Klik salah satu unsur untuk menampilkan Ar-nya (massa atom relatif).")
 
+
 # Fungsi tampilkan baris
 def tampilkan_baris(baris, baris_id):
-    cols = st.columns(18)
-    for i in range(18):
-        elemen = baris[i] if i < len(baris) else ""
-        if elemen:
-            if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
-                st.session_state.selected = elemen
+    for baris in tabel_periodik:
+    cols = st.columns([0.25] * len(baris))  # Lebih kecil agar pas layar HP
+    for i, simbol in enumerate(baris):
+        if simbol:
+            if cols[i].button(simbol, key=f"{simbol}_{i}"):
+                st.success(f"Simbol: {simbol} — [Tampilkan data Ar, nama, dll]")
         else:
-            cols[i].markdown("")
+            cols[i].markdown(" ")
 
 # Tampilkan seluruh baris
 for baris_index, baris in enumerate(grid):
