@@ -163,6 +163,27 @@ st.markdown("""
 st.markdown('<div class="big-font">Kalkulator Massa Molar Senyawa Kimia</div>', unsafe_allow_html=True)
 st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
 
+#gambar
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Periodic_table_large.svg/640px-Periodic_table_large.svg.png", use_column_width=True)
+with col2:
+    st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
+    st.write("Aplikasi ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan.")
+
+# ===============================
+# PENJELASAN MASSA MOLAR
+# ===============================
+with st.expander("📘 Apa itu Massa Molar?"):
+    st.markdown("""
+**Massa molar** adalah massa satu mol suatu zat (unsur atau senyawa), biasanya dinyatakan dalam satuan gram per mol (g/mol).  
+Contohnya:
+- Massa molar air (H₂O) adalah sekitar 18.02 g/mol
+- Massa molar natrium klorida (NaCl) adalah sekitar 58.44 g/mol
+
+Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
+""")
+    
 # Form input
 with st.form("form_kimia"):
     rumus = st.text_input("Rumus Kimia", placeholder="Contoh: H2O, NaCl, CH3COOH")
