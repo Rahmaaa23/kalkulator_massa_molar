@@ -121,8 +121,8 @@ elif halaman == "🧬 Tabel Periodik":
         st.session_state.selected = None
 
     def tampilkan_baris(baris, baris_id):
-    cols = st.columns(18)
-    for i in range(18):
+    cols = st.columns(12)
+    for i in range(12):
         elemen = baris[i] if i < len(baris) else ""
         if elemen:
             with cols[i]:
