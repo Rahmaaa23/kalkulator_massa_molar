@@ -123,7 +123,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 # Sidebar
-halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik" tentang aplikasi])
+halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik" "tentang aplikasi"])
 
 if halaman == "🏠 Beranda":
     st.title("🧪 Kalkulator Kimia")
