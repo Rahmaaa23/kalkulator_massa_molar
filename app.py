@@ -208,61 +208,79 @@ st.set_page_config("Tabel Periodik Interaktif", page_icon="🧪", layout="wide")
 st.title("🧪 Tabel Periodik Interaktif")
 st.caption("Klik simbol unsur untuk melihat massa atom relatif (Ar) dalam g/mol.")
 
-# Grid utama tabel periodik (periode 1–7)
-periodik_main = [
-    ["H"] + [""] * 16 + ["He"],
-    ["Li", "Be"] + [""] * 10 + ["B", "C", "N", "O", "F", "Ne"],
-    ["Na", "Mg"] + [""] * 10 + ["Al", "Si", "P", "S", "Cl", "Ar"],
+import streamlit as st
+
+# Dictionary Ar unsur (massa atom relatif)
+massa_atom = {
+    "H": 1.008, "He": 4.0026, "Li": 6.94, "Be": 9.0122, "B": 10.81, "C": 12.01, "N": 14.01,
+    "O": 16.00, "F": 18.998, "Ne": 20.18, "Na": 22.99, "Mg": 24.305, "Al": 26.98, "Si": 28.09,
+    "P": 30.97, "S": 32.07, "Cl": 35.45, "Ar": 39.95, "K": 39.10, "Ca": 40.08, "Sc": 44.96,
+    "Ti": 47.87, "V": 50.94, "Cr": 52.00, "Mn": 54.94, "Fe": 55.85, "Co": 58.93, "Ni": 58.69,
+    "Cu": 63.55, "Zn": 65.38, "Ga": 69.72, "Ge": 72.63, "As": 74.92, "Se": 78.96, "Br": 79.90,
+    "Kr": 83.80, "Rb": 85.47, "Sr": 87.62, "Y": 88.91, "Zr": 91.22, "Nb": 92.91, "Mo": 95.95,
+    "Tc": 98, "Ru": 101.1, "Rh": 102.9, "Pd": 106.4, "Ag": 107.9, "Cd": 112.4, "In": 114.8,
+    "Sn": 118.7, "Sb": 121.8, "Te": 127.6, "I": 126.9, "Xe": 131.3, "Cs": 132.9, "Ba": 137.3,
+    "La": 138.9, "Ce": 140.1, "Pr": 140.9, "Nd": 144.2, "Pm": 145, "Sm": 150.4, "Eu": 152.0,
+    "Gd": 157.3, "Tb": 158.9, "Dy": 162.5, "Ho": 164.9, "Er": 167.3, "Tm": 168.9, "Yb": 173.0,
+    "Lu": 175.0, "Hf": 178.5, "Ta": 180.9, "W": 183.8, "Re": 186.2, "Os": 190.2, "Ir": 192.2,
+    "Pt": 195.1, "Au": 197.0, "Hg": 200.6, "Tl": 204.4, "Pb": 207.2, "Bi": 208.9, "Po": 209,
+    "At": 210, "Rn": 222, "Fr": 223, "Ra": 226, "Ac": 227, "Th": 232.0, "Pa": 231.0, "U": 238.0,
+    "Np": 237, "Pu": 244, "Am": 243, "Cm": 247, "Bk": 247, "Cf": 251, "Es": 252, "Fm": 257,
+    "Md": 258, "No": 259, "Lr": 262, "Rf": 267, "Db": 270, "Sg": 271, "Bh": 270, "Hs": 277,
+    "Mt": 276, "Ds": 281, "Rg": 280, "Cn": 285, "Nh": 284, "Fl": 289, "Mc": 288, "Lv": 293,
+    "Ts": 294, "Og": 294
+}
+
+# Struktur grid periodik
+grid = [
+    ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
+    ["Li", "Be", "", "", "", "", "", "", "", "", "", "", "B", "C", "N", "O", "F", "Ne"],
+    ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
     ["K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr"],
     ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"],
-    ["Cs", "Ba", "La"] + [""] + ["Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
-    ["Fr", "Ra", "Ac"] + [""] + ["Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
+    ["Cs", "Ba", "La", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
+    ["Fr", "Ra", "Ac", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
 ]
-# Baris lanthanida dan aktinida
-lanthanida = [""] * 3 + ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
-aktinida = [""] * 3 + ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
 
-selected = None
+lanthanida = ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+aktinida = ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
 
-# Variabel penyimpanan
-selected = None
+# Init session_state
+if "selected" not in st.session_state:
+    st.session_state.selected = None
 
-# Fungsi menampilkan grid
-def tampilkan_grid(baris):
-    for row in baris:
-        cols = st.columns(len(row))
-        for i, el in enumerate(row):
-            if el == "":
-                cols[i].markdown(" ")
-            else:
-                if cols[i].button(el):
-                    return el
-    return None
-    
-# Tampilkan grid
-for row_num, baris in enumerate(grid):
-    tampilkan_baris(baris, f"baris_{row_num}")
+st.set_page_config(layout="wide")
+st.title("🔬 Tabel Periodik Interaktif")
+st.markdown("Klik salah satu unsur untuk menampilkan Ar-nya (massa atom relatif).")
 
-# Lanthanida dan Aktinida
+# Fungsi tampilkan baris
+def tampilkan_baris(baris, baris_id):
+    cols = st.columns(18)
+    for i in range(18):
+        elemen = baris[i] if i < len(baris) else ""
+        if elemen:
+            if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
+                st.session_state.selected = elemen
+        else:
+            cols[i].markdown("")
+
+# Tampilkan seluruh baris
+for baris_index, baris in enumerate(grid):
+    # tambahkan padding kosong jika kurang dari 18
+    padding = 18 - len(baris)
+    tampilkan_baris(baris + [""] * padding, f"main_{baris_index}")
+
+# Lanthanida
 st.markdown("### Lanthanida")
 tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
 
+# Aktinida
 st.markdown("### Aktinida")
 tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
 
-    
-
-# Tampilkan info simbol besar & massa atom
-if selected:
-    ar = massa_atom.get(selected, "Tidak diketahui")
-    st.markdown("---")
-    st.markdown(f"""
-    <div style='text-align: center; padding: 2rem; border: 2px solid #CCC; border-radius: 15px; background-color: #f9f9f9;'>
-        <div style='font-size: 96px; font-weight: bold; color: #333;'>{selected}</div>
-        <div style='font-size: 24px;'>Massa Atom Relatif (Ar): <strong>{ar} g/mol</strong></div>
-    </div>
-    """, unsafe_allow_html=True)
-
-# Gambar tabel periodik (opsional)
-st.markdown("### 📷 Gambar Referensi Tabel Periodik")
-st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.swarawarta.co.id%2F2024%2F03%2Ftabel-periodik-hd-pdf-dan-pembahasannya.html&psig=AOvVaw2foOZMA_5alhZZdrtMIiSc&ust=1752846010136000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKiV5qaCxI4DFQAAAAAdAAAAABAj", use_column_width=True)
+# Hasil klik
+if st.session_state.selected:
+    sim = st.session_state.selected
+    ar = massa_atom.get(sim, "Tidak ditemukan")
+    st.success(f"**{sim}** → Ar = **{ar}**")
+    st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
