@@ -182,7 +182,7 @@ Contohnya:
 Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
 """)
 # Form input
-   st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
+     st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
 with st.form("form_kimia"):
     rumus = st.text_input("Rumus Kimia", placeholder="Contoh: H2O, NaCl, CH3COOH")
     submit = st.form_submit_button("Hitung Massa Molar")
