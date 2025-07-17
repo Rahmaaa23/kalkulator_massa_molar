@@ -167,9 +167,7 @@ with col1:
     st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVx1ePJuorDta4eJJvcLPiKPyvGLUFU2PFIznnQqQ5ghkbeiGO8ssJxHu64vbv0IoVvfo&usqp=CAU", use_container_width=True)
 with col2:
     st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
-    st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan.")
-    st.write("Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya.")
-    st.write("Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
+    st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan. Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya. Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
 
 
 # ===============================
