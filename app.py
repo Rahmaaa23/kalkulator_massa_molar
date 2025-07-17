@@ -15,6 +15,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+background-color: rgba(255, 255, 255, 0.85);
 
 # =========================
 # DATA MASSA ATOM RELATIF
