@@ -119,6 +119,7 @@ massa_atom = {
     "Lr": 266.00
 }
 
+st.sidebar.[Kalkulator massa molar]
 # Fungsi parsing rumus kimia sederhana
 def hitung_massa_molar(rumus):
     pattern = r'([A-Z][a-z]*)(\d*)'
