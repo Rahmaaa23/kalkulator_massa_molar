@@ -238,11 +238,6 @@ def tampilkan_grid(baris):
                 if cols[i].button(el):
                     return el
     return None
-
-# Render utama
-# --- Tampilkan grid utama ---
-for i, row in enumerate(grid):
-    tampilkan_baris(row, f"main_{i}")
     
 st.markdown("**Lanthanida**")
 selected_lanthanida = tampilkan_grid([lanthanida])
