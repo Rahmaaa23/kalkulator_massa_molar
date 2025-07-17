@@ -142,58 +142,6 @@ elif halaman == "🧪 Kalkulator Massa Molar":
     st.write("Masukkan rumus senyawa untuk menghitung massa molarnya.")
     # Tambahkan kode kalkulator kamu di sini
 
-elif halaman == "🧬 Tabel Periodik":
-    st.title("🧬 Tabel Periodik Interaktif")
-    st.write("Klik unsur untuk melihat massa atom relatifnya.")
-    # Tambahkan kode tabel periodik kamu di sini
-
-elif halaman == "ℹ️ Tentang Aplikasi":
-    st.title("ℹ️ Tentang Aplikasi")
-    st.markdown("""
-    Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik.
-
-    **Fitur**:
-    - Kalkulator Massa Molar
-    - Tabel Periodik Interaktif
-    - Tampilan yang mendukung perangkat mobile
-
-    Dibuat oleh: *[Namamu di sini]*  
-    Sumber data: IUPAC, PubChem, dan tabel periodik modern
-    """)
-
-
-#gambar
-col1, col2 = st.columns([1, 2])
-with col1:
-    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVx1ePJuorDta4eJJvcLPiKPyvGLUFU2PFIznnQqQ5ghkbeiGO8ssJxHu64vbv0IoVvfo&usqp=CAU", use_container_width=True)
-with col2:
-    st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
-    st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan. Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya. Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
-
-# ===============================
-# PENJELASAN MASSA MOLAR
-# ===============================
-
-with st.expander("📘 Apa itu Massa Molar?"):
-    st.markdown("""
-**Massa molar** adalah massa satu mol suatu zat (unsur atau senyawa), biasanya dinyatakan dalam satuan gram per mol (g/mol).  
-Contohnya:
-- Massa molar air (H₂O) adalah sekitar 18.02 g/mol
-- Massa molar natrium klorida (NaCl) adalah sekitar 58.44 g/mol
-
-Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
-""")
-with st.expander("📘 Bagaimana cara mencari massa molar?"):
-    st.markdown("""
-**Massa molar** senyawa dihitung dengan menjumlahkan massa atom relatif (Ar) tiap unsur dikalikan jumlah atomnya. Misalnya pada H₂O: hidrogen (Ar = 1) ada 2 atom, sehingga totalnya 2 × 1 = 2; oksigen (Ar = 16) ada 1 atom, jadi 1 × 16 = 16. Maka, massa molar H₂O adalah 2 + 16 = **18 g/mol**.
-
-""")
-
-elif halaman == "🧪 Kalkulator Massa Molar":
-    st.title("🧪 Kalkulator Massa Molar")
-    st.write("Masukkan rumus senyawa untuk menghitung massa molarnya.")
-    # Tambahkan kode kalkulator kamu di sini
-
 # Fungsi parsing rumus kimia sederhana
 def hitung_massa_molar(rumus):
     pattern = r'([A-Z][a-z]*)(\d*)'
@@ -358,6 +306,33 @@ elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi")
     st.markdown("""
     Aplikasi ini dibuat menggunakan **Python + Streamlit** untuk membantu pelajar dan mahasiswa dalam mempelajari konsep kimia seperti massa molar dan tabel periodik.
+    #gambar
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVx1ePJuorDta4eJJvcLPiKPyvGLUFU2PFIznnQqQ5ghkbeiGO8ssJxHu64vbv0IoVvfo&usqp=CAU", use_container_width=True)
+with col2:
+    st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
+    st.write("Website ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan. Rumus kimia senyawa yang dimasukkan seperti `H2O`, `NaCl`, `C6H12O6` untuk menghitung massa molarnya. Adapun acuan tabel periodik yang digunakan yaitu pada bagian akhir web")
+
+# ===============================
+# PENJELASAN MASSA MOLAR
+# ===============================
+
+with st.expander("📘 Apa itu Massa Molar?"):
+    st.markdown("""
+**Massa molar** adalah massa satu mol suatu zat (unsur atau senyawa), biasanya dinyatakan dalam satuan gram per mol (g/mol).  
+Contohnya:
+- Massa molar air (H₂O) adalah sekitar 18.02 g/mol
+- Massa molar natrium klorida (NaCl) adalah sekitar 58.44 g/mol
+
+Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
+""")
+with st.expander("📘 Bagaimana cara mencari massa molar?"):
+    st.markdown("""
+**Massa molar** senyawa dihitung dengan menjumlahkan massa atom relatif (Ar) tiap unsur dikalikan jumlah atomnya. Misalnya pada H₂O: hidrogen (Ar = 1) ada 2 atom, sehingga totalnya 2 × 1 = 2; oksigen (Ar = 16) ada 1 atom, jadi 1 × 16 = 16. Maka, massa molar H₂O adalah 2 + 16 = **18 g/mol**.
+
+""")
+
 
     **Fitur**:
     - Kalkulator Massa Molar
