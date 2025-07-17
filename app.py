@@ -201,4 +201,69 @@ if submit:
                 f'<strong>{hasil:.3f} g/mol</strong>.</div>', 
                 unsafe_allow_html=True
             )
-            
+
+import streamlit as st
+# Halaman Streamlit
+st.set_page_config("Tabel Periodik Interaktif", page_icon="🧪", layout="wide")
+st.title("🧪 Tabel Periodik Interaktif")
+st.caption("Klik simbol unsur untuk melihat massa atom relatif (Ar) dalam g/mol.")
+
+# Grid utama tabel periodik (periode 1–7)
+periodik_main = [
+    ["H"] + [""] * 16 + ["He"],
+    ["Li", "Be"] + [""] * 10 + ["B", "C", "N", "O", "F", "Ne"],
+    ["Na", "Mg"] + [""] * 10 + ["Al", "Si", "P", "S", "Cl", "Ar"],
+    ["K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr"],
+    ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"],
+    ["Cs", "Ba", "La"] + [""] + ["Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
+    ["Fr", "Ra", "Ac"] + [""] + ["Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
+]
+
+# Baris lanthanida dan aktinida
+    [""] * 3 + ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+    [""] * 3 + ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
+
+selected = None
+
+# Fungsi untuk menampilkan grid periodik
+def tampilkan_grid(grid):
+    for row in grid:
+        cols = st.columns(len(row))
+        for i, simbol in enumerate(row):
+            if simbol == "":
+                cols[i].write(" ")
+            else:
+                if cols[i].button(simbol):
+                    return simbol
+    return None
+
+# Tampilkan grid utama
+pilih_main = tampilkan_grid(periodik_main)
+
+# Separator
+st.markdown(" ")
+st.markdown("**▶ Lanthanida dan Aktinida**")
+
+# Tampilkan baris lanthanida dan aktinida
+with st.container():
+    st.markdown("**Lanthanida**")
+    pilih_lanth = tampilkan_grid([lanthanida])
+    st.markdown("**Aktinida**")
+    pilih_aktin = tampilkan_grid([aktinida])
+
+# Cek unsur yang dipilih
+selected = pilih_main or pilih_lanth or pilih_aktin
+
+# Tampilkan info massa atom
+if selected:
+    ar = massa_atom.get(selected)
+    if ar:
+        st.success(f"**{selected}** → Massa atom relatif (Ar) = **{ar} g/mol**")
+    else:
+        st.warning(f"Massa atom untuk {selected} belum tersedia.")
+
+# Gambar tabel periodik (opsional)
+st.markdown("---")
+st.markdown("### 📷 Gambar Tabel Periodik Referensi")
+st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.swarawarta.co.id%2F2024%2F03%2Ftabel-periodik-hd-pdf-dan-pembahasannya.html&psig=AOvVaw2foOZMA_5alhZZdrtMIiSc&ust=1752846010136000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKiV5qaCxI4DFQAAAAAdAAAAABAj", caption="Tabel periodik kimia")
+
