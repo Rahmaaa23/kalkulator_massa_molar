@@ -181,6 +181,22 @@ Contohnya:
 
 Massa molar diperoleh dengan menjumlahkan massa atom relatif dari unsur-unsur penyusun senyawa tersebut, dikalikan dengan jumlahnya masing-masing.
 """)
+with st.expander("📘 Bagaimana cara mencari massa molar?"):
+    st.markdown("""
+**Massa molar** Untuk menghitungnya, pertama-tama tuliskan rumus kimia senyawa, lalu cari Ar tiap unsur dari tabel periodik. Kemudian, kalikan Ar dengan jumlah atom masing-masing unsur, dan jumlahkan seluruhnya. Hasil akhir dinyatakan dalam satuan gram per mol (g/mol). Sebagai contoh, massa molar air (H₂O) adalah 
+2
+×
+1
++
+1
+×
+16
+=
+18
+ 
+g/mol
+2×1+1×16=18g/mol.
+""")
     
 # Form input
 with st.form("form_kimia"):
