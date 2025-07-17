@@ -270,8 +270,8 @@ st.markdown("Klik salah satu unsur untuk menampilkan Ar-nya (massa atom relatif)
 
 # Fungsi tampilkan baris
 def tampilkan_baris(baris, baris_id):
-    cols = st.columns(0.25)
-    for i in range(0.25):
+    cols = st.columns(18)
+    for i in range(18):
         elemen = baris[i] if i < len(baris) else ""
         if elemen:
             if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
