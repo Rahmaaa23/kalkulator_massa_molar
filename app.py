@@ -58,9 +58,8 @@ halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa M
 # =========================
 if halaman == "🏠 Beranda":
     st.title("🧪 Aplikasi Kimia Interaktif")
-    st.image("https://images.unsplash.com/photo-1605810230434-7631ac76ec94", use_column_width=True)
     st.markdown("""
-Selamat datang di **Aplikasi Kimia Interaktif** berbasis Streamlit!  
+Selamat datang di **Aplikasi Kimia** berbasis Streamlit!  
 Di sini kamu dapat:
 
 - Menghitung **massa molar** senyawa kimia  
