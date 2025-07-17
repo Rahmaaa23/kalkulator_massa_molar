@@ -166,7 +166,7 @@ st.write("Masukkan rumus kimia senyawa seperti `H2O`, `NaCl`, `C6H12O6` untuk me
 #gambar
 col1, col2 = st.columns([1, 2])
 with col1:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Periodic_table_large.svg/640px-Periodic_table_large.svg.png", use_column_width=True)
+    st.imaage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVx1ePJuorDta4eJJvcLPiKPyvGLUFU2PFIznnQqQ5ghkbeiGO8ssJxHu64vbv0IoVvfo&usqp=CAU", use_column_width=True)
 with col2:
     st.markdown('<div class="big-font">🧪 Kalkulator Massa Molar Senyawa</div>', unsafe_allow_html=True)
     st.write("Aplikasi ini digunakan untuk menghitung **massa molar** senyawa kimia berdasarkan rumus kimia yang Anda masukkan.")
