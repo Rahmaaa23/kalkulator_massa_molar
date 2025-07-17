@@ -149,14 +149,13 @@ elif halaman == "🧬 Tabel Periodik":
 # =========================
 elif halaman == "🏠 Beranda":
     st.title("**Dasar Teori Massa Molar**")
-    st.markdown(""" 
-    **Massa molar** adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan **gram per mol (g/mol)**. Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung **6,022 × 10²³ partikel (atom, ion, atau molekul)**.
-    #### ✅ **Pada Unsur**
+    st.markdown(""" **Massa molar** adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan **gram per mol (g/mol)**. Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung **6,022 × 10²³ partikel (atom, ion, atau molekul)**.
+    ✅ **Pada Unsur**
     Massa molar unsur sama dengan **massa atom relatif (Ar)** dalam satuan gram/mol. Misalnya:
     * Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = **1,008 g/mol**
     * Karbon (C) memiliki Ar = 12,011 → massa molarnya = **12,011 g/mol**
     Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
-    #### ✅ **Pada Senyawa**
+    ✅ **Pada Senyawa**
     Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
     * **Air (H₂O):**
 
@@ -172,7 +171,7 @@ elif halaman == "🏠 Beranda":
   Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
   ---
   
-  ###🔍 Pentingnya Massa Molar
+  🔍 Pentingnya Massa Molar
   Massa molar digunakan untuk:
   
   * Mengonversi antara **jumlah mol dan massa** dalam gram.
