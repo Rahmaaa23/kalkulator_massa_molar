@@ -123,12 +123,13 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 # Sidebar
-halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik"])
+halaman = st.sidebar.radio("Navigasi", ["🏠 Beranda", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik" tentang aplikasi])
 
 if halaman == "🏠 Beranda":
     st.title("🧪 Kalkulator Kimia")
     st.write("Selamat datang di aplikasi kalkulator kimia. Silakan pilih fitur di sidebar.")
-   
+    
+elif halaman == "tentang aplikasi":   
 #gambar
 col1, col2 = st.columns([1, 2])
 with col1:
