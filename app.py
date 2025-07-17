@@ -4,7 +4,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Ftirto.id%2Fmengenal-senyawa-organik-dalam-kimia-ciri-ciri-dan-contohnya-go56&psig=AOvVaw0od-RIjIgIAO2JpC-VMVu8&ust=1752857705535000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDBu_CtxI4DFQAAAAAdAAAAABAE");
+        background-image: url("https://mmc.tirto.id/image/2021/07/05/istock-1208824917_ratio-16x9.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
