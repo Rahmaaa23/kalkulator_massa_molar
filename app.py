@@ -119,16 +119,7 @@ elif halaman == "🧬 Tabel Periodik":
 
     if "selected" not in st.session_state:
         st.session_state.selected = None
-        
-        def tampilkan_baris(baris, baris_id):
-            cols = st.columns(18)
-        for i in range(18):
-            elemen = baris[i] if i < len(baris) else ""
-            if elemen:
-                if cols[i].button(elemen, key=f"{baris_id}_{i}_{elemen}"):
-                    st.session_state.selected = elemen
-            else:
-                cols[i].markdown("")
+
 def tampilkan_baris(baris, baris_id):
     cols = st.columns(18)
     for i in range(18):
