@@ -70,20 +70,14 @@ Di sini kamu dapat:
 
 
 
-    with st.expander("📘 Petunjuk penggunaan fitur massa molar"):
+    with st.expander("📌 Petunjuk penggunaan fitur massa molar"):
         st.markdown("""
 📌 Petunjuk Penggunaan Fitur Massa Molar:
-Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
-
-Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks.
-
-Contoh penulisan:
-
-Untuk senyawa sederhana: NaCl
-
-Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
-
-Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
+- Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
+- Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks. 
+- Contoh penulisan: Untuk senyawa sederhana: NaCl
+  - Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
+- Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
 """)
         
     rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
