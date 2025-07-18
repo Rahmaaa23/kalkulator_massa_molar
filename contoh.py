@@ -11,7 +11,7 @@ st.markdown(
     }
 
     .block-container {
-        background-color: rgba(255, 255, 255, 0.65); /* putih semi-transparan untuk konten */
+        background-color: rgba(255, 255, 255, 0.65); /* hitam semi-transparan untuk konten */
         padding: 2rem;
         border-radius: 12px;
     }
@@ -204,7 +204,7 @@ Analisis laboratorium dan preparasi larutan.
 # HALAMAN TENTANG
 # =========================
 elif halaman == "ℹ️ Tentang Aplikasi":
-    st.title("ℹ️ Tentang Aplikasi Kimia Interaktif")
+    st.title("ℹ️ Tentang Aplikasi Kimia")
     st.markdown("""
 Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan tabel periodik.  
 Fitur:
