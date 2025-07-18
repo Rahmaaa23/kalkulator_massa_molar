@@ -64,6 +64,10 @@ Di sini kamu dapat:
 - Menelusuri tabel periodik interaktif  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
+    st.info("Aplikasi ini masih dalam tahap pengembangan. Beberapa fitur mungkin belum berfungsi dengan sempurna.")
+    st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
+
+
 
 
     with st.expander("📘 Apa itu Massa Molar?"):
