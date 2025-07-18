@@ -193,7 +193,7 @@ Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat 
 Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
 
-Air (H₂O):
+*Air (H₂O)*:
 
 2 atom H × 1,008 = 2,016
 
@@ -201,7 +201,7 @@ Air (H₂O):
 
 Total massa molar = 18,015 g/mol
 
-Karbon dioksida (CO₂):
+*Karbon dioksida (CO₂)*:
 
 1 atom C × 12,011 = 12,011
 
@@ -215,12 +215,9 @@ Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perh
     st.markdown("""
 Pentingnya Massa Molar
 Massa molar digunakan untuk:
-
-Mengonversi antara jumlah mol dan massa dalam gram.
-
-Menghitung pereaksi dan hasil dalam reaksi kimia.
-
-Analisis laboratorium dan preparasi larutan.
+- Mengonversi antara jumlah mol dan massa dalam gram.
+- Menghitung pereaksi dan hasil dalam reaksi kimia.
+- Analisis laboratorium dan preparasi larutan.
 """)
 
  
@@ -232,12 +229,12 @@ elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi Kimia")
     st.markdown("""
 Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan tabel periodik.  
-Fitur:
+*Fitur*:
 - Hitung massa molar dari senyawa kimia
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
 - Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
 
-Kekurangan aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
+*Kekurangan* aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
 
 Dikembangkan menggunakan Python dan Streamlit.
 """)
