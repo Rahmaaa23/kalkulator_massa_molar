@@ -149,9 +149,9 @@ elif halaman == "🧬 Tabel Periodik":
 # HALAMAN BERANDA
 # =========================
 elif halaman == "🏠 Dasar Teori":
-      st.title("Dasar teori massa molar")
+    st.title("Dasar teori massa molar")
     st.header("Pengertian Massa Molar")
-st.markdown("""
+    st.markdown("""
 Massa molar adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan gram per mol (g/mol). Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung 6,022 × 10²³ partikel (atom, ion, atau molekul).
 
 ✅ Pada Unsur
