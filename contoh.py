@@ -70,15 +70,22 @@ Di sini kamu dapat:
 
 
 
-    with st.expander("📘 Apa itu Massa Molar?"):
+    with st.expander("📘 Petunjuk penggunaan fitur massa molar"):
         st.markdown("""
-Massa molar adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
+📌 Petunjuk Penggunaan Fitur Massa Molar:
+Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
 
-Contoh:
-- H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ 18.015 g/mol
-- NaCl → Na + Cl = 22.99 + 35.45 = 58.44 g/mol
-        """)
+Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks.
 
+Contoh penulisan:
+
+Untuk senyawa sederhana: NaCl
+
+Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
+
+Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
+""")
+        
     rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
 
     def hitung_massa_molar(rumus):
