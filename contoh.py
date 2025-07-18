@@ -64,8 +64,6 @@ Di sini kamu dapat:
 - Menelusuri tabel periodik interaktif  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
-    st.info("Aplikasi ini masih dalam tahap pengembangan. Beberapa fitur mungkin belum berfungsi dengan sempurna.")
-    st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
 
 
 
@@ -75,7 +73,8 @@ Di sini kamu dapat:
 📌 Petunjuk Penggunaan Fitur Massa Molar:
 - Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
 - Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks. 
-- Contoh penulisan: Untuk senyawa sederhana: NaCl
+- Contoh penulisan: 
+  - Untuk senyawa sederhana: NaCl
   - Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
 - Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
 """)
@@ -102,6 +101,12 @@ Di sini kamu dapat:
                 st.error(error)
             else:
                 st.success(f"Massa molar dari {rumus} adalah {hasil:.3f} g/mol")
+                
+    
+    st.info("Aplikasi ini belum bisa input senyawa kimia yang menggunakan tanda kurung ()")            
+    st.info("Aplikasi ini masih dalam tahap pengembangan. Beberapa fitur mungkin belum berfungsi dengan sempurna.")
+    
+
 
 # =========================
 # HALAMAN TABEL PERIODIK
