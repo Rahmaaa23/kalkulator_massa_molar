@@ -101,6 +101,7 @@ Contoh:
                 continue  # skip i += 1
             i += 1
         return stack[0]
+
         massa_total = 0
         for simbol, jumlah in elemen:
             if simbol not in massa_atom:
