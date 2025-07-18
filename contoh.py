@@ -150,7 +150,7 @@ elif halaman == "🧬 Tabel Periodik":
 # =========================
 elif halaman == "🏠 Dasar Teori":
     st.title("Dasar teori massa molar")
-    st.header("Pengertian Massa Molar")
+    st.header("📖Pengertian Massa Molar")
     st.markdown("""
 Massa molar adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan gram per mol (g/mol). Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung 6,022 × 10²³ partikel (atom, ion, atau molekul).
 
@@ -163,7 +163,7 @@ Karbon (C) memiliki Ar = 12,011 → massa molarnya = 12,011 g/mol
 
 Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
 """)
-    st.header("Perhitungan Massa Molar")
+    st.header("💯Perhitungan Massa Molar")
     st.markdown("""
 ✅ Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
