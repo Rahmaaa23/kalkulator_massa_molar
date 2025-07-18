@@ -80,6 +80,29 @@ Contoh:
     def hitung_massa_molar(rumus):
         pattern = r'([A-Z][a-z]*)(\d*)'
         elemen = re.findall(pattern, rumus)
+        stack = [[]]
+    i = 0
+        while i < len(tokens):
+            token = tokens[i]
+
+            if token == '(':
+                stack.append([])  # mulai blok baru
+            elif token == ')':
+                group = stack.pop()
+                i += 1
+                multiplier = int(tokens[i]) if i < len(tokens) and tokens[i].isdigit() else 1
+                stack[-1].extend(group * multiplier)
+            elif re.match(r'[A-Z][a-z]?', token):
+                element = token
+                i += 1
+                count = int(tokens[i]) if i < len(tokens) and tokens[i].isdigit() else 1
+                stack[-1].append((element, count))
+                if i < len(tokens) and tokens[i].isdigit():
+                    i += 1
+                continue  # skip i += 1
+            i += 1
+
+        return stack[0]
         massa_total = 0
         for simbol, jumlah in elemen:
             if simbol not in massa_atom:
