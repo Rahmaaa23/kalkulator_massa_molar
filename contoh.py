@@ -186,9 +186,9 @@ Total massa molar = 44,009 g/mol
 
 Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
 """)
-    st.header("Kegunaan Massa Molar")
+    st.header("🔍Kegunaan Massa Molar")
     st.markdown("""
-🔍 Pentingnya Massa Molar
+Pentingnya Massa Molar
 Massa molar digunakan untuk:
 
 Mengonversi antara jumlah mol dan massa dalam gram.
