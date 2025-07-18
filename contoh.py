@@ -142,10 +142,7 @@ elif halaman == "🧬 Tabel Periodik":
             else:
                 cols[i].markdown("")
 
-    # 👉 Bagi menjadi dua kolom besar
-    col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
 
-    with col1:
         for idx, baris in enumerate(grid):
             tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
 
@@ -161,7 +158,7 @@ elif halaman == "🧬 Tabel Periodik":
             st.success(f"{sim} → Ar = {ar}")
             st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
 
-    with col2:
+
         st.markdown("### 🖼️ Referensi Gambar")
         st.image(
             "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijgeH1Dc3KYGXmDhfr8cGhOouAOTXK5VTsewxpW9fLFfzVFmnZ0h-UsjFNOJgPw1qKLW6s9f2c9POTIinYEXCaRVR9fVjFYOEJKK0A_aspTnDXB54o0q4IKsFnrWyela5qqFR1GZvkvVJ-/s1600/sistem-periodik-unsur.jpg",
