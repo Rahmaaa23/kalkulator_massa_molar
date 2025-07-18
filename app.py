@@ -118,7 +118,19 @@ elif halaman == "🧬 Tabel Periodik":
     lanthanida = ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
     aktinida = ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
 
-    
+     if "selected" not in st.session_state:
+        st.session_state.selected = None
+
+    def tampilkan_baris(baris, baris_id):
+        cols = st.columns(18)
+        for i in range(18):
+            elemen = baris[i] if i < len(baris) else ""
+            if elemen:
+                if cols[i].button(elemen, key=f"{baris_id}{i}{elemen}"):
+                    st.session_state.selected = elemen
+            else:
+                cols[i].markdown("")
+
 
     # 👉 Bagi menjadi dua kolom besar
     col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
@@ -133,12 +145,7 @@ elif halaman == "🧬 Tabel Periodik":
         st.markdown("### Aktinida")
         tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
 
-        if st.session_state.selected:
-            sim = st.session_state.selected
-            ar = massa_atom.get(sim, "Tidak ditemukan")
-            st.success(f"{sim} → Ar = {ar}")
-            st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
-
+       
     with col2:
         st.markdown("### 🖼️ Referensi Gambar")
         st.image(
@@ -146,19 +153,13 @@ elif halaman == "🧬 Tabel Periodik":
             use_container_width=True,
             caption="Tabel Periodik Lengkap"
         )
-        if "selected" not in st.session_state:
-        st.session_state.selected = None
+         if st.session_state.selected:
+            sim = st.session_state.selected
+            ar = massa_atom.get(sim, "Tidak ditemukan")
+            st.success(f"{sim} → Ar = {ar}")
+            st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
 
-    def tampilkan_baris(baris, baris_id):
-        cols = st.columns(18)
-        for i in range(18):
-            elemen = baris[i] if i < len(baris) else ""
-            if elemen:
-                if cols[i].button(elemen, key=f"{baris_id}{i}{elemen}"):
-                    st.session_state.selected = elemen
-            else:
-                cols[i].markdown("")
-
+       
    
 
 # =========================
