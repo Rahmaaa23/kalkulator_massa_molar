@@ -154,7 +154,7 @@ elif halaman == "🏠 Dasar Teori":
     st.markdown("""
 Massa molar adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan gram per mol (g/mol). Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung 6,022 × 10²³ partikel (atom, ion, atau molekul).
 
-✅ Pada Unsur
+Pada Unsur
 Massa molar unsur sama dengan massa atom relatif (Ar) dalam satuan gram/mol. Misalnya:
 
 Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = 1,008 g/mol
@@ -165,7 +165,7 @@ Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat 
 """)
     st.header("💯Perhitungan Massa Molar")
     st.markdown("""
-✅ Pada Senyawa
+Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
 
 Air (H₂O):
