@@ -17,7 +17,7 @@ st.markdown("""
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4);  /* warna hitam dengan opasitas 60% */
+    background: rgba(0, 0, 0, 0.6);  /* warna hitam dengan opasitas 60% */
     z-index: 0;
 }
 
@@ -30,7 +30,7 @@ st.markdown("""
 /* Warna teks dan elemen input agar tetap terang */
 html, body {
     background-color: transparent;
-    color: hitam;
+    color: putih;
 }
 [data-testid="stSidebar"] {
     background-color: rgba(255, 255, 255, 0.65);
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, p, span, label, div {
 }
 input, textarea {
     background-color: rgba(255, 255, 255, 0.1);
-    color: hitam;
+    color: putih;
 }
 button {
     background-color: rgba(255, 255, 255, 0.55);
