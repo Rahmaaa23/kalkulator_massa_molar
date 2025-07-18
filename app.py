@@ -20,6 +20,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+import streamlit as st
+import re
+
 # =========================
 # DATA MASSA ATOM RELATIF
 # =========================
@@ -173,17 +176,18 @@ Contoh:
 - H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ *18.015 g/mol*
 - NaCl → Na + Cl = 22.99 + 35.45 = *58.44 g/mol*
         """)
-rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
- def hitung_massa_molar(rumus):
-        pattern = r'([A-Z][a-z])(\d)'
-        elemen = re.findall(pattern, rumus)
-        massa_total = 0
-        for simbol, jumlah in elemen:
-            if simbol not in massa_atom:
-                return None, f"Unsur '{simbol}' tidak ditemukan."
-            n = int(jumlah) if jumlah else 1
-            massa_total += massa_atom[simbol] * n
-        return massa_total, None
+        rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
+        
+        def hitung_massa_molar(rumus):
+            pattern = r'([A-Z][a-z]?)(\d*)'
+            elemen = re.findall(pattern, rumus)
+            massa_total = 0
+            for simbol, jumlah in elemen:
+                if simbol not in massa_atom:
+                    return None, f"Unsur '{simbol}' tidak ditemukan."
+                    n = int(jumlah) if jumlah else 1
+                    massa_total += massa_atom[simbol] * n
+                    return massa_total, None
 
     if st.button("Hitung Massa Molar"):
         if rumus.strip() == "":
