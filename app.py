@@ -132,7 +132,7 @@ elif halaman == "🧬 Tabel Periodik":
                 cols[i].markdown("")
 
     # 👉 Bagi menjadi dua kolom besar
-    col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
+    col1, col2 = st.columns([1, 1])  # 1:1 rasio untuk memberi lebih banyak ruang ke tabel
 
     with col1:
         for idx, baris in enumerate(grid):
@@ -157,8 +157,6 @@ elif halaman == "🧬 Tabel Periodik":
             use_container_width=True,
             caption="Tabel Periodik Lengkap"
         )
-
-   
 
 # =========================
 # HALAMAN BERANDA
@@ -212,8 +210,6 @@ Menghitung pereaksi dan hasil dalam reaksi kimia.
 
 Analisis laboratorium dan preparasi larutan.
 """)
-
- 
     
 # =========================
 # HALAMAN TENTANG
