@@ -48,7 +48,7 @@ massa_atom = {
 # =========================
 st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
 
-halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
+halaman = st.sidebar.radio("MENU", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
 
 
 # =========================
@@ -112,7 +112,8 @@ Di sini kamu dapat:
 # HALAMAN TABEL PERIODIK
 # =========================
 elif halaman == "🧬 Tabel Periodik":
-
+    
+    st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
     st.title("🔬 Tabel Periodik Unsur")
 
     grid = [
