@@ -225,5 +225,12 @@ Fitur:
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
 - Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
 
+Kekurangan aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, 
+sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, 
+fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang
+atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
+
+
+
 Dikembangkan menggunakan Python dan Streamlit.
 """)
