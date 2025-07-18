@@ -156,13 +156,16 @@ elif halaman == "🧬 Tabel Periodik":
         ar = massa_atom.get(sim, "Tidak ditemukan")
         st.success(f"{sim} → Ar = {ar}")
         st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
-
-
-
-   
+        
+    st.markdown("### 🖼️ Referensi Gambar")
+    st.image(
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijgeH1Dc3KYGXmDhfr8cGhOouAOTXK5VTsewxpW9fLFfzVFmnZ0h-UsjFNOJgPw1qKLW6s9f2c9POTIinYEXCaRVR9fVjFYOEJKK0A_aspTnDXB54o0q4IKsFnrWyela5qqFR1GZvkvVJ-/s1600/sistem-periodik-unsur.jpg",
+    use_container_width=True,
+    caption="Tabel Periodik Lengkap"
+        )
 
 # =========================
-# HALAMAN BERANDA
+# HALAMAN DASAR TEORI
 # =========================
 elif halaman == "🏠 Dasar Teori":
     st.title("Dasar teori massa molar")
