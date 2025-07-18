@@ -23,40 +23,6 @@ st.markdown(
 # =========================
 # DATA MASSA ATOM RELATIF
 # =========================
-
-   
-# =========================
-# SIDEBAR NAVIGASI
-# =========================
-st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
-
-halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
-
-
-# =========================
-# HALAMAN KALKULATOR
-# =========================
-if halaman == "🧪 Kalkulator Massa Molar":
-    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
-    st.markdown("""
-Selamat datang di *Aplikasi Kimia Interaktif* berbasis Streamlit!  
-Di sini kamu dapat:
-
-- Menghitung *massa molar* senyawa kimia  
-- Menelusuri *tabel periodik interaktif*  
-- Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
-""")
-
-
-    with st.expander("📘 Apa itu Massa Molar?"):
-        st.markdown("""
-*Massa molar* adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
-
-Contoh:
-- H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ *18.015 g/mol*
-- NaCl → Na + Cl = 22.99 + 35.45 = *58.44 g/mol*
-        """)
-
 massa_atom = {
      "H": 1.008,
     "Li": 6.94,
@@ -195,6 +161,40 @@ massa_atom = {
                 st.error(error)
             else:
                 st.success(f"Massa molar dari *{rumus}* adalah *{hasil:.3f} g/mol*")
+   
+# =========================
+# SIDEBAR NAVIGASI
+# =========================
+st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
+
+halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
+
+
+# =========================
+# HALAMAN KALKULATOR
+# =========================
+if halaman == "🧪 Kalkulator Massa Molar":
+    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
+    st.markdown("""
+Selamat datang di *Aplikasi Kimia Interaktif* berbasis Streamlit!  
+Di sini kamu dapat:
+
+- Menghitung *massa molar* senyawa kimia  
+- Menelusuri *tabel periodik interaktif*  
+- Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
+""")
+
+
+    with st.expander("📘 Apa itu Massa Molar?"):
+        st.markdown("""
+*Massa molar* adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
+
+Contoh:
+- H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ *18.015 g/mol*
+- NaCl → Na + Cl = 22.99 + 35.45 = *58.44 g/mol*
+        """)
+rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
+
 
 # =========================
 # HALAMAN TABEL PERIODIK
