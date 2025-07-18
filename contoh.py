@@ -229,7 +229,7 @@ elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi Kimia")
     st.markdown("""
 Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan tabel periodik.  
-*Fitur*:
+**Fitur**:
 - Hitung massa molar dari senyawa kimia
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
 - Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
