@@ -193,7 +193,7 @@ Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat 
 Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
 
-*Air (H₂O)*:
+**Air (H₂O)**:
 
 2 atom H × 1,008 = 2,016
 
@@ -201,7 +201,7 @@ Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikal
 
 Total massa molar = 18,015 g/mol
 
-*Karbon dioksida (CO₂)*:
+**Karbon dioksida (CO₂)**:
 
 1 atom C × 12,011 = 12,011
 
@@ -234,7 +234,7 @@ Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
 - Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
 
-*Kekurangan* aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
+**Kekurangan** aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
 
 Dikembangkan menggunakan Python dan Streamlit.
 """)
