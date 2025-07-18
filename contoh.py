@@ -128,12 +128,12 @@ elif halaman == "🧬 Tabel Periodik":
         ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
         ["K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr"],
         ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"],
-        ["Cs", "Ba", "La", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
-        ["Fr", "Ra", "Ac", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
+        ["Cs", "Ba", "", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
+        ["Fr", "Ra", "", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
     ]
 
-    lanthanida = ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
-    aktinida = ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
+    lanthanida = ["La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+    aktinida = ["Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
 
     if "selected" not in st.session_state:
         st.session_state.selected = None
@@ -165,7 +165,7 @@ elif halaman == "🧬 Tabel Periodik":
         
     st.markdown("### 🖼️ Referensi Gambar")
     st.image(
-    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijgeH1Dc3KYGXmDhfr8cGhOouAOTXK5VTsewxpW9fLFfzVFmnZ0h-UsjFNOJgPw1qKLW6s9f2c9POTIinYEXCaRVR9fVjFYOEJKK0A_aspTnDXB54o0q4IKsFnrWyela5qqFR1GZvkvVJ-/s1600/sistem-periodik-unsur.jpg",
+    "https://akcdn.detik.net.id/community/media/visual/2021/12/15/tabel-periodik-unsur-kimia.jpeg?w=700&q=90",
     use_container_width=True,
     caption="Tabel Periodik Lengkap"
         )
