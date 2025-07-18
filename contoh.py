@@ -81,7 +81,6 @@ Contoh:
         pattern = r'([A-Z][a-z]*)(\d*)'
         elemen = re.findall(pattern, rumus)
         stack = [[]]
-    i = 0
         while i < len(tokens):
             token = tokens[i]
 
