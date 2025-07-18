@@ -132,7 +132,7 @@ elif halaman == "🧬 Tabel Periodik":
                 cols[i].markdown("")
 
     # 👉 Bagi menjadi dua kolom besar
-    col1, col2 = st.columns([1, 1])  # 1:1 rasio untuk memberi lebih banyak ruang ke tabel
+    col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
 
     with col1:
         for idx, baris in enumerate(grid):
@@ -148,7 +148,7 @@ elif halaman == "🧬 Tabel Periodik":
             sim = st.session_state.selected
             ar = massa_atom.get(sim, "Tidak ditemukan")
             st.success(f"{sim} → Ar = {ar}")
-            st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+            st.markdown(f"<h1 style='text-align: center; font-size: 50px;'>{sim}</h1>", unsafe_allow_html=True)
 
     with col2:
         st.markdown("### 🖼️ Referensi Gambar")
