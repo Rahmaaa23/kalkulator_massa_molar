@@ -1,54 +1,24 @@
 import streamlit as st
 import re
-st.markdown("""
-<style>
+st.markdown(
+    """
+    <style>
     .stApp {
         background-image: url("https://mmc.tirto.id/image/2021/07/05/istock-1208824917_ratio-16x9.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
     }
-<style>
-/* Background hitam transparan */
-[data-testid="stAppViewContainer"]::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.65);  /* warna hitam dengan opasitas 60% */
-    z-index: 0;
-}
 
-/* Letakkan konten di atas overlay */
-[data-testid="stAppViewContainer"] > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Warna teks dan elemen input agar tetap terang */
-html, body {
-    background-color: transparent;
-    color: white;
-}
-[data-testid="stSidebar"] {
-    background-color: rgba(255, 255, 255, 0.65);
-}
-h1, h2, h3, h4, h5, h6, p, span, label, div {
-    color: black;
-}
-input, textarea {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: black;
-}
-button {
-    background-color: rgba(255, 255, 255, 0.55);
-    color: white;
-}
-</style>
-""", unsafe_allow_html=True)
-
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.65); /* putih semi-transparan untuk konten */
+        padding: 2rem;
+        border-radius: 12px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # =========================
 # DATA MASSA ATOM RELATIF
