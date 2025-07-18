@@ -30,20 +30,20 @@ st.markdown("""
 /* Warna teks dan elemen input agar tetap terang */
 html, body {
     background-color: transparent;
-    color: white;
+    color: hitam;
 }
 [data-testid="stSidebar"] {
     background-color: rgba(0, 0, 0, 0.8);
 }
 h1, h2, h3, h4, h5, h6, p, span, label, div {
-    color: white;
+    color: hitam;
 }
 input, textarea {
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: hitam;
 }
 button {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.55);
     color: white;
 }
 </style>
