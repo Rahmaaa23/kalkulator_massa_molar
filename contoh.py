@@ -131,60 +131,34 @@ elif halaman == "🧬 Tabel Periodik":
             else:
                 cols[i].markdown("")
 
-    for idx, baris in enumerate(grid):
-        tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
+    # 👉 Bagi menjadi dua kolom besar
+    col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
 
-    st.markdown("### Lanthanida")
-    tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
+    with col1:
+        for idx, baris in enumerate(grid):
+            tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
 
-    st.markdown("### Aktinida")
-    tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
+        st.markdown("### Lanthanida")
+        tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
 
-    if st.session_state.selected:
-        sim = st.session_state.selected
-        ar = massa_atom.get(sim, "Tidak ditemukan")
-        st.success(f"{sim} → Ar = {ar}")
-        st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
-    <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Halaman Terbelah Dua</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-    .left, .right {
-      flex: 1;
-      padding: 2rem;
-      color: white;
-    }
-    .left {
-      background-color: #222;
-    }
-    .right {
-      background-color: #444;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="left">
-      <h2>Kiri</h2>
-      <p>Ini adalah bagian kiri halaman.</p>
-    </div>
-    <div class="right">
-      <h2>Kanan</h2>
-      <p>Ini adalah bagian kanan halaman.</p>
-    </div>
-  </div>
-</body>
-</html>
+        st.markdown("### Aktinida")
+        tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
+
+        if st.session_state.selected:
+            sim = st.session_state.selected
+            ar = massa_atom.get(sim, "Tidak ditemukan")
+            st.success(f"{sim} → Ar = {ar}")
+            st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("### 🖼️ Referensi Gambar")
+        st.image(
+            "https://upload.wikimedia.org/wikipedia/commons/0/01/Periodic_table_large.png",
+            use_column_width=True,
+            caption="Tabel Periodik Lengkap"
+        )
+
+   
 
 # =========================
 # HALAMAN BERANDA
