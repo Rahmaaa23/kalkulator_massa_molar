@@ -218,17 +218,19 @@ Massa molar digunakan untuk:
 # =========================
 elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi Kimia")
+    st.header("kelebihan")
     st.markdown("""
 Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan tabel periodik.  
 Fitur:
 - Hitung massa molar dari senyawa kimia
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
-- Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
-
+- Mobile-friendly dan dapat digunakan tanpa instalasi tambahan""")
+    st.header("Kekurangan")
+    st.markdown("""
 Kekurangan aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, 
 sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, 
 fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang
-atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
+atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.""")
 
 
 
