@@ -145,6 +145,47 @@ elif halaman == "🧬 Tabel Periodik":
         ar = massa_atom.get(sim, "Tidak ditemukan")
         st.success(f"{sim} → Ar = {ar}")
         st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Terbelah Dua</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .left, .right {
+      flex: 1;
+      padding: 2rem;
+      color: white;
+    }
+    .left {
+      background-color: #222;
+    }
+    .right {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h2>Kiri</h2>
+      <p>Ini adalah bagian kiri halaman.</p>
+    </div>
+    <div class="right">
+      <h2>Kanan</h2>
+      <p>Ini adalah bagian kanan halaman.</p>
+    </div>
+  </div>
+</body>
+</html>
+
 # =========================
 # HALAMAN BERANDA
 # =========================
