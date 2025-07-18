@@ -79,7 +79,7 @@ Contoh:
 
     def hitung_massa_molar(rumus):
         def parse(formula):
-        tokens = re.findall(r'([A-Z][a-z]*)|\(|\)|(*\d+)', formula)
+        tokens = re.findall(r'([A-Z][a-z]*)(*\d)', formula)
         stack = [[]]
 
         i = 0
