@@ -100,7 +100,6 @@ Contoh:
                     i += 1
                 continue  # skip i += 1
             i += 1
-
         return stack[0]
         massa_total = 0
         for simbol, jumlah in elemen:
