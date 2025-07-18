@@ -78,7 +78,7 @@ Contoh:
     rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
 
     def hitung_massa_molar(rumus):
-    def parse(formula):
+        def parse(formula):
         tokens = re.findall(r'([A-Z][a-z]?|\(|\)|\d+)', formula)
         stack = [[]]
 
