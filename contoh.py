@@ -114,7 +114,13 @@ Di sini kamu dapat:
 elif halaman == "🧬 Tabel Periodik":
     
     st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
-    st.title("🔬 Tabel Periodik Unsur")
+    st.markdown("""
+    <h1 style='text-align: center; color: #2c3e50; font-family: Arial, sans-serif; margin-top: 10px;'>
+    🔬 Tabel Periodik Unsur
+    </h1>
+    """, unsafe_allow_html=True)
+
+
     
     grid = [
         ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
