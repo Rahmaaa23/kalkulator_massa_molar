@@ -144,12 +144,7 @@ elif halaman == "🧬 Tabel Periodik":
         st.markdown("### Aktinida")
         tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
 
-        if st.session_state.selected:
-            sim = st.session_state.selected
-            ar = massa_atom.get(sim, "Tidak ditemukan")
-            st.success(f"{sim} → Ar = {ar}")
-            st.markdown(f"<h1 style='text-align: center; font-size: 50px;'>{sim}</h1>", unsafe_allow_html=True)
-
+       
     with col2:
         st.markdown("### 🖼️ Referensi Gambar")
         st.image(
@@ -157,6 +152,12 @@ elif halaman == "🧬 Tabel Periodik":
             use_container_width=True,
             caption="Tabel Periodik Lengkap"
         )
+         if st.session_state.selected:
+            sim = st.session_state.selected
+            ar = massa_atom.get(sim, "Tidak ditemukan")
+            st.success(f"{sim} → Ar = {ar}")
+            st.markdown(f"<h1 style='text-align: center; font-size: 50px;'>{sim}</h1>", unsafe_allow_html=True)
+
 
 # =========================
 # HALAMAN BERANDA
