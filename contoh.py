@@ -83,7 +83,6 @@ Contoh:
         stack = [[]]
         while i < len(tokens):
             token = tokens[i]
-
             if token == '(':
                 stack.append([])  # mulai blok baru
             elif token == ')':
