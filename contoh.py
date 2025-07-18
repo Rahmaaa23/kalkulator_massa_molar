@@ -17,9 +17,18 @@ st.markdown("""
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);  /* warna hitam dengan opasitas 60% */
+    background: rgba(0, 0, 0, 0.4);  /* warna hitam dengan opasitas 60% */
     z-index: 0;
 }
+.block-container {
+        background-color: rgba(255, 255, 255, 0.65); /* hitam semi-transparan untuk konten */
+        padding: 2rem;
+        border-radius: 12px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 /* Letakkan konten di atas overlay */
 [data-testid="stAppViewContainer"] > * {
@@ -33,10 +42,10 @@ html, body {
     color: hitam;
 }
 [data-testid="stSidebar"] {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.65);
 }
 h1, h2, h3, h4, h5, h6, p, span, label, div {
-    color: hitam;
+    color: putih;
 }
 input, textarea {
     background-color: rgba(255, 255, 255, 0.1);
