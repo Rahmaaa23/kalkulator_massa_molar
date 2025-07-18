@@ -17,7 +17,7 @@ st.markdown("""
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.65);  /* warna hitam dengan opasitas 60% */
+    background: rgba(255, 255, 255, 0.65);  /* warna hitam dengan opasitas 60% */
     z-index: 0;
 }
 
@@ -36,11 +36,11 @@ html, body {
     background-color: rgba(255, 255, 255, 0.65);
 }
 h1, h2, h3, h4, h5, h6, p, span, label, div {
-    color: white;
+    color: black;
 }
 input, textarea {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
 }
 button {
     background-color: rgba(255, 255, 255, 0.55);
