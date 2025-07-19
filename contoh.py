@@ -103,7 +103,7 @@ Di sini kamu dapat:
                 st.success(f"Massa molar dari {rumus} adalah {hasil:.3f} g/mol")
                 
     
-    st.info("Aplikasi ini belum bisa input senyawa kimia yang menggunakan tanda kurung ()")            
+    st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
     st.info("Aplikasi ini masih dalam tahap pengembangan. Beberapa fitur mungkin belum berfungsi dengan sempurna.")
     
 
