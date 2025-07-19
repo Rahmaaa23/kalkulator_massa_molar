@@ -46,7 +46,7 @@ massa_atom = {
 # =========================
 # SIDEBAR NAVIGASI
 # =========================
-st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
+st.set_page_config(page_title="Kalkulator Massa Molar", layout="wide", page_icon="🧪")
 
 halaman = st.sidebar.radio("MENU", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
 
