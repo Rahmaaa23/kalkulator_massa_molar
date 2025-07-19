@@ -57,11 +57,11 @@ halaman = st.sidebar.radio("MENU", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel 
 if halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
     st.markdown("""
-Selamat datang di Aplikasi Kimia Interaktif berbasis Streamlit!  
+Selamat datang di Aplikasi Kimia berbasis Streamlit!  
 Di sini kamu dapat:
 
 - Menghitung massa molar senyawa kimia  
-- Menelusuri tabel periodik interaktif  
+- Menelusuri tabel periodik  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
 
