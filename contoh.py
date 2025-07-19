@@ -104,7 +104,7 @@ Di sini kamu dapat:
                 
     
     st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
-    st.info("Aplikasi ini masih dalam tahap pengembangan. Beberapa fitur mungkin belum berfungsi dengan sempurna.")
+   
     
 
 
