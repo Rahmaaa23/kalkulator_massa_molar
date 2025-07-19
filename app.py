@@ -1,5 +1,10 @@
 import streamlit as st
 import re
+
+# =========================
+# BACKGROUND
+# =========================
+
 st.markdown(
     """
     <style>
@@ -65,9 +70,6 @@ Di sini kamu dapat:
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
 
-
-
-
     with st.expander("📌 Petunjuk penggunaan fitur massa molar"):
         st.markdown("""
 📌 Petunjuk Penggunaan Fitur Massa Molar:
@@ -105,8 +107,6 @@ Di sini kamu dapat:
     
     st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
    
-    
-
 
 # =========================
 # HALAMAN TABEL PERIODIK
@@ -223,7 +223,7 @@ Massa molar digunakan untuk:
  
     
 # =========================
-# HALAMAN TENTANG
+# HALAMAN TENTANG APLIKASI
 # =========================
 elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi Kimia")
