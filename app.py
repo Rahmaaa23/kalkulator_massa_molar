@@ -46,9 +46,9 @@ massa_atom = {
 # =========================
 # SIDEBAR NAVIGASI
 # =========================
-st.set_page_config(page_title="Kimia Interaktif", layout="wide", page_icon="🧪")
+st.set_page_config(page_title="Kalkulator Massa Molar", layout="wide", page_icon="🧪")
 
-halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
+halaman = st.sidebar.radio("MENU", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
 
 
 # =========================
@@ -57,24 +57,28 @@ halaman = st.sidebar.radio("Navigasi", [ "🧪 Kalkulator Massa Molar", "🧬 Ta
 if halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
     st.markdown("""
-Selamat datang di Aplikasi Kimia Interaktif berbasis Streamlit!  
+Selamat datang di Aplikasi Kimia berbasis Streamlit!  
 Di sini kamu dapat:
 
 - Menghitung massa molar senyawa kimia  
-- Menelusuri tabel periodik interaktif  
+- Menelusuri tabel periodik  
 - Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah  
 """)
 
 
-    with st.expander("📘 Apa itu Massa Molar?"):
+
+
+    with st.expander("📌 Petunjuk penggunaan fitur massa molar"):
         st.markdown("""
-Massa molar adalah jumlah massa dari semua atom dalam satu mol senyawa, dinyatakan dalam g/mol.
-
-Contoh:
-- H₂O → 2×H + 1×O = 2×1.008 + 15.999 ≈ 18.015 g/mol
-- NaCl → Na + Cl = 22.99 + 35.45 = 58.44 g/mol
-        """)
-
+📌 Petunjuk Penggunaan Fitur Massa Molar:
+- Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
+- Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks. 
+- Contoh penulisan: 
+  - Untuk senyawa sederhana: NaCl
+  - Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
+- Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
+""")
+        
     rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
 
     def hitung_massa_molar(rumus):
@@ -97,26 +101,39 @@ Contoh:
                 st.error(error)
             else:
                 st.success(f"Massa molar dari {rumus} adalah {hasil:.3f} g/mol")
+                
+    
+    st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
+   
+    
+
 
 # =========================
 # HALAMAN TABEL PERIODIK
 # =========================
 elif halaman == "🧬 Tabel Periodik":
+    
+    st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
+    st.markdown("""
+    <h1 style='text-align: center; color: #2c3e50; font-family: Arial, sans-serif; margin-top: 10px;'>
+    🔬 Tabel Periodik Unsur
+    </h1>
+    """, unsafe_allow_html=True)
 
-    st.title("🔬 Tabel Periodik Unsur")
 
+    
     grid = [
         ["H", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "He"],
         ["Li", "Be", "", "", "", "", "", "", "", "", "", "", "B", "C", "N", "O", "F", "Ne"],
         ["Na", "Mg", "", "", "", "", "", "", "", "", "", "", "Al", "Si", "P", "S", "Cl", "Ar"],
         ["K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr"],
         ["Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe"],
-        ["Cs", "Ba", "La", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
-        ["Fr", "Ra", "Ac", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
+        ["Cs", "Ba", "", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn"],
+        ["Fr", "Ra", "", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"]
     ]
 
-    lanthanida = ["Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
-    aktinida = ["Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
+    lanthanida = ["La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu"]
+    aktinida = ["Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr"]
 
     if "selected" not in st.session_state:
         st.session_state.selected = None
@@ -131,37 +148,30 @@ elif halaman == "🧬 Tabel Periodik":
             else:
                 cols[i].markdown("")
 
-    # 👉 Bagi menjadi dua kolom besar
-    col1, col2 = st.columns([2, 1])  # 2:1 rasio untuk memberi lebih banyak ruang ke tabel
+    for idx, baris in enumerate(grid):
+        tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
 
-    with col1:
-        for idx, baris in enumerate(grid):
-            tampilkan_baris(baris + [""] * (18 - len(baris)), f"main_{idx}")
+    st.markdown("### Lanthanida")
+    tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
 
-        st.markdown("### Lanthanida")
-        tampilkan_baris(lanthanida + [""] * (18 - len(lanthanida)), "lanthanida")
+    st.markdown("### Aktinida")
+    tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
 
-        st.markdown("### Aktinida")
-        tampilkan_baris(aktinida + [""] * (18 - len(aktinida)), "aktinida")
-
-        if st.session_state.selected:
-            sim = st.session_state.selected
-            ar = massa_atom.get(sim, "Tidak ditemukan")
-            st.success(f"{sim} → Ar = {ar}")
-            st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("### 🖼️ Referensi Gambar")
-        st.image(
-            "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijgeH1Dc3KYGXmDhfr8cGhOouAOTXK5VTsewxpW9fLFfzVFmnZ0h-UsjFNOJgPw1qKLW6s9f2c9POTIinYEXCaRVR9fVjFYOEJKK0A_aspTnDXB54o0q4IKsFnrWyela5qqFR1GZvkvVJ-/s1600/sistem-periodik-unsur.jpg",
-            use_container_width=True,
-            caption="Tabel Periodik Lengkap"
+    if st.session_state.selected:
+        sim = st.session_state.selected
+        ar = massa_atom.get(sim, "Tidak ditemukan")
+        st.success(f"{sim} → Ar = {ar}")
+        st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
+        
+    st.markdown("### 🖼️ Referensi Gambar")
+    st.image(
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijgeH1Dc3KYGXmDhfr8cGhOouAOTXK5VTsewxpW9fLFfzVFmnZ0h-UsjFNOJgPw1qKLW6s9f2c9POTIinYEXCaRVR9fVjFYOEJKK0A_aspTnDXB54o0q4IKsFnrWyela5qqFR1GZvkvVJ-/s1600/sistem-periodik-unsur.jpg",
+    use_container_width=True,
+    caption="Tabel Periodik Lengkap"
         )
 
-   
-
 # =========================
-# HALAMAN BERANDA
+# HALAMAN DASAR TEORI
 # =========================
 elif halaman == "🏠 Dasar Teori":
     st.title("Dasar teori massa molar")
@@ -183,7 +193,7 @@ Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat 
 Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
 
-Air (H₂O):
+**Air (H₂O)**:
 
 2 atom H × 1,008 = 2,016
 
@@ -191,7 +201,7 @@ Air (H₂O):
 
 Total massa molar = 18,015 g/mol
 
-Karbon dioksida (CO₂):
+**Karbon dioksida (CO₂)**:
 
 1 atom C × 12,011 = 12,011
 
@@ -205,7 +215,6 @@ Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perh
     st.markdown("""
 Pentingnya Massa Molar
 Massa molar digunakan untuk:
-
 - Mengonversi antara jumlah mol dan massa dalam gram.
 - Menghitung pereaksi dan hasil dalam reaksi kimia.
 - Analisis laboratorium dan preparasi larutan.
@@ -218,21 +227,14 @@ Massa molar digunakan untuk:
 # =========================
 elif halaman == "ℹ️ Tentang Aplikasi":
     st.title("ℹ️ Tentang Aplikasi Kimia")
-    st.header("kelebihan")
     st.markdown("""
 Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan tabel periodik.  
-Fitur:
+**Fitur**:
 - Hitung massa molar dari senyawa kimia
 - Tabel periodik interaktif (klik unsur untuk lihat Ar)
-- Mobile-friendly dan dapat digunakan tanpa instalasi tambahan""")
-    st.header("Kekurangan")
-    st.markdown("""
-Kekurangan aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, 
-sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, 
-fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang
-atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.""")
+- Mobile-friendly dan dapat digunakan tanpa instalasi tambahan
 
-
+**Kekurangan** aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
 
 Dikembangkan menggunakan Python dan Streamlit.
 """)
