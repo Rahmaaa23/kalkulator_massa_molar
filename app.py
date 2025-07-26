@@ -82,24 +82,43 @@ Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat 
     st.header("💯Perhitungan Massa Molar")
     st.markdown("""
 Pada Senyawa
-Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
+Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur.
 
-**Air (H₂O)**:
+💧 Contoh 1: Air (H₂O)
+Rumus kimia: H₂O
 
-2 atom H × 1,008 = 2,016
+Terdiri dari:
 
-1 atom O × 15,999 = 15,999
+2 atom H → Ar = 1,008
 
-Total massa molar = 18,015 g/mol
+1 atom O → Ar = 15,999
 
-**Karbon dioksida (CO₂)**:
+📘 Perhitungan:
+massa molar = jumlah atom × nilai Ar
 
-1 atom C × 12,011 = 12,011
+H: 2 × 1,008 = 2,016 g/mol
 
-2 atom O × 15,999 = 31,998
+O: 1 × 15,999 = 15,999 g/mol
 
-Total massa molar = 44,009 g/mol
+Total massa molar = 2,016 + 15,999 = 18,015 g/mol
 
+🌫️ Contoh 2: Karbon Dioksida (CO₂)
+Rumus kimia: CO₂
+
+Terdiri dari:
+
+1 atom C → Ar = 12,011
+
+2 atom O → Ar = 15,999
+
+📘 Perhitungan:
+massa molar = jumlah atom × nilai Ar
+
+C: 1 × 12,011 = 12,011 g/mol
+
+O: 2 × 15,999 = 31,998 g/mol
+
+Total massa molar = 12,011 + 31,998 = 44,009 g/mol
 Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
 """)
     st.header("🔍Kegunaan Massa Molar")
