@@ -60,9 +60,7 @@ halaman = st.sidebar.radio("MENU", [  "🏠 Dasar Teori", "🧪 Kalkulator Massa
 # =========================
 if halaman == "🏠 Dasar Teori":
     st.title("Selamat datang di Aplikasi Kimia berbasis Streamlit!")
-    st.markdown("""
-**Di sini kamu dapat:**
-
+    st.markdown("""**Di sini kamu dapat:**
 - **Menghitung massa molar senyawa kimia** 
 - **Menelusuri tabel periodik** 
 - **Mempelajari unsur dan Ar (massa atom relatif)-nya dengan mudah**
