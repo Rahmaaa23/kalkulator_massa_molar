@@ -53,7 +53,7 @@ massa_atom = {
 # =========================
 st.set_page_config(page_title="Kalkulator Massa Molar", layout="wide", page_icon="🧪")
 
-halaman = st.sidebar.radio("MENU", [  "🏠 Dasar Teori", "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "ℹ️ Tentang Aplikasi"])
+halaman = st.sidebar.radio("MENU", [  "🏠 Dasar Teori",  "🧬 Tabel Periodik", "🧪 Kalkulator Massa Molar", "ℹ️ Tentang Aplikasi"])
 
 # =========================
 # HALAMAN DASAR TEORI
@@ -94,7 +94,7 @@ Terdiri dari:
 1 atom O → Ar = 15,999
 
 📘 Perhitungan:
-massa molar = jumlah atom × nilai Ar
+**massa molar = jumlah atom × nilai Ar**
 
 H: 2 × 1,008 = 2,016 g/mol
 
@@ -112,7 +112,7 @@ Terdiri dari:
 2 atom O → Ar = 15,999
 
 📘 Perhitungan:
-massa molar = jumlah atom × nilai Ar
+**massa molar = jumlah atom × nilai Ar**
 
 C: 1 × 12,011 = 12,011 g/mol
 
