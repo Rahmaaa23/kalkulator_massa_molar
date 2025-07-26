@@ -256,7 +256,8 @@ Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan
 **Kekurangan** aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
 
 Dikembangkan oleh kelompok 7 kelas 1B, Prodi Analisis Kimia, Politeknik AKA Bogor. 
-TIM Pengembangan Aplikasi
+
+**TimPengembangan Aplikasi:**
 1. Amalia Rahmah Syafitri	
 2. Ghathfan Rifqi Triharto       	  	
 3. Mochammad Ghazy Al Gyfari 	
