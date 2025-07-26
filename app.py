@@ -257,7 +257,7 @@ Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan
 
 Dikembangkan oleh kelompok 7 kelas 1B, Prodi Analisis Kimia, Politeknik AKA Bogor. 
 
-**TimPengembangan Aplikasi:**
+**Tim Pengembangan Aplikasi:**
 1. Amalia Rahmah Syafitri	
 2. Ghathfan Rifqi Triharto       	  	
 3. Mochammad Ghazy Al Gyfari 	
