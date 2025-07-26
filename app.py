@@ -55,11 +55,63 @@ st.set_page_config(page_title="Kalkulator Massa Molar", layout="wide", page_icon
 
 halaman = st.sidebar.radio("MENU", [ "🧪 Kalkulator Massa Molar", "🧬 Tabel Periodik", "🏠 Dasar Teori", "ℹ️ Tentang Aplikasi"])
 
+# =========================
+# HALAMAN DASAR TEORI
+# =========================
+if halaman == "🏠 Dasar Teori":
+    st.title("Dasar teori massa molar")
+    st.header("📖Pengertian Massa Molar")
+    st.markdown("""
+Massa molar adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan gram per mol (g/mol). Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung 6,022 × 10²³ partikel (atom, ion, atau molekul).
+
+Pada Unsur
+Massa molar unsur sama dengan massa atom relatif (Ar) dalam satuan gram/mol. Misalnya:
+
+Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = 1,008 g/mol
+
+Karbon (C) memiliki Ar = 12,011 → massa molarnya = 12,011 g/mol
+
+Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
+""")
+ st.header("💯Perhitungan Massa Molar")
+    st.markdown("""
+Pada Senyawa
+Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
+
+**Air (H₂O)**:
+
+2 atom H × 1,008 = 2,016
+
+1 atom O × 15,999 = 15,999
+
+Total massa molar = 18,015 g/mol
+
+**Karbon dioksida (CO₂)**:
+
+1 atom C × 12,011 = 12,011
+
+2 atom O × 15,999 = 31,998
+
+Total massa molar = 44,009 g/mol
+
+Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
+""")
+    st.header("🔍Kegunaan Massa Molar")
+    st.markdown("""
+Pentingnya Massa Molar
+Massa molar digunakan untuk:
+- Mengonversi antara jumlah mol dan massa dalam gram.
+- Menghitung pereaksi dan hasil dalam reaksi kimia.
+- Analisis laboratorium dan preparasi larutan.
+""")
+
+ 
+    
 
 # =========================
 # HALAMAN KALKULATOR
 # =========================
-if halaman == "🧪 Kalkulator Massa Molar":
+elif halaman == "🧪 Kalkulator Massa Molar":
     st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
     st.markdown("""
 Selamat datang di Aplikasi Kimia berbasis Streamlit!  
@@ -170,58 +222,8 @@ elif halaman == "🧬 Tabel Periodik":
     caption="Tabel Periodik Lengkap"
         )
 
-# =========================
-# HALAMAN DASAR TEORI
-# =========================
-elif halaman == "🏠 Dasar Teori":
-    st.title("Dasar teori massa molar")
-    st.header("📖Pengertian Massa Molar")
-    st.markdown("""
-Massa molar adalah massa dari satu mol suatu zat (unsur atau senyawa), yang dinyatakan dalam satuan gram per mol (g/mol). Konsep ini merupakan turunan dari hukum Avogadro yang menyatakan bahwa satu mol zat mengandung 6,022 × 10²³ partikel (atom, ion, atau molekul).
 
-Pada Unsur
-Massa molar unsur sama dengan massa atom relatif (Ar) dalam satuan gram/mol. Misalnya:
 
-Hidrogen (H) memiliki Ar = 1,008 → maka massa molar H = 1,008 g/mol
-
-Karbon (C) memiliki Ar = 12,011 → massa molarnya = 12,011 g/mol
-
-Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
-""")
-    st.header("💯Perhitungan Massa Molar")
-    st.markdown("""
-Pada Senyawa
-Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
-
-**Air (H₂O)**:
-
-2 atom H × 1,008 = 2,016
-
-1 atom O × 15,999 = 15,999
-
-Total massa molar = 18,015 g/mol
-
-**Karbon dioksida (CO₂)**:
-
-1 atom C × 12,011 = 12,011
-
-2 atom O × 15,999 = 31,998
-
-Total massa molar = 44,009 g/mol
-
-Perhitungan ini penting dalam stoikiometri kimia, analisis kuantitatif, dan perhitungan reaksi kimia.
-""")
-    st.header("🔍Kegunaan Massa Molar")
-    st.markdown("""
-Pentingnya Massa Molar
-Massa molar digunakan untuk:
-- Mengonversi antara jumlah mol dan massa dalam gram.
-- Menghitung pereaksi dan hasil dalam reaksi kimia.
-- Analisis laboratorium dan preparasi larutan.
-""")
-
- 
-    
 # =========================
 # HALAMAN TENTANG APLIKASI
 # =========================
