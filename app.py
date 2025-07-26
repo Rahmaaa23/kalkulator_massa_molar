@@ -73,7 +73,7 @@ Karbon (C) memiliki Ar = 12,011 → massa molarnya = 12,011 g/mol
 
 Nilai Ar ini diperoleh dari rata-rata massa isotop unsur tersebut yang terdapat di alam, disesuaikan dengan kelimpahannya.
 """)
- st.header("💯Perhitungan Massa Molar")
+    st.header("💯Perhitungan Massa Molar")
     st.markdown("""
 Pada Senyawa
 Massa molar senyawa adalah jumlah dari massa molar tiap unsur penyusunnya, dikalikan dengan jumlah atom dari masing-masing unsur. Contohnya:
