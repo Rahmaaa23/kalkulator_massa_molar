@@ -130,53 +130,6 @@ Massa molar digunakan untuk:
 - Analisis laboratorium dan preparasi larutan.
 """)
 
- 
-    
-
-# =========================
-# HALAMAN KALKULATOR
-# =========================
-elif halaman == "🧪 Kalkulator Massa Molar":
-    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
-
-    with st.expander("📌 Petunjuk penggunaan fitur massa molar"):
-        st.markdown("""
-📌 Petunjuk Penggunaan Fitur Massa Molar:
-- Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
-- Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks. 
-- Contoh penulisan: 
-  - Untuk senyawa sederhana: NaCl
-  - Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
-- Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
-""")
-        
-    rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
-
-    def hitung_massa_molar(rumus):
-        pattern = r'([A-Z][a-z]*)(\d*)'
-        elemen = re.findall(pattern, rumus)
-        massa_total = 0
-        for simbol, jumlah in elemen:
-            if simbol not in massa_atom:
-                return None, f"Unsur '{simbol}' tidak ditemukan dalam database."
-            n = int(jumlah) if jumlah else 1
-            massa_total += massa_atom[simbol] * n
-        return massa_total, None
-
-    if st.button("Hitung Massa Molar"):
-        if rumus.strip() == "":
-            st.warning("⚠️ Masukkan rumus terlebih dahulu.")
-        else:
-            hasil, error = hitung_massa_molar(rumus.strip())
-            if error:
-                st.error(error)
-            else:
-                st.success(f"Massa molar dari {rumus} adalah {hasil:.3f} g/mol")
-                
-    
-    st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
-   
-
 # =========================
 # HALAMAN TABEL PERIODIK
 # =========================
@@ -239,6 +192,53 @@ elif halaman == "🧬 Tabel Periodik":
     caption="Tabel Periodik Lengkap"
         )
 
+    
+
+# =========================
+# HALAMAN KALKULATOR
+# =========================
+elif halaman == "🧪 Kalkulator Massa Molar":
+    st.title("🧪 Kalkulator Massa Molar Senyawa Kimia")
+
+    with st.expander("📌 Petunjuk penggunaan fitur massa molar"):
+        st.markdown("""
+📌 Petunjuk Penggunaan Fitur Massa Molar:
+- Pengguna dapat menghitung massa molar dengan memasukkan rumus senyawa kimia pada kolom input yang telah disediakan.
+- Penulisan rumus harus sesuai dengan aturan kimia, menggunakan simbol unsur dan angka indeks. 
+- Contoh penulisan: 
+  - Untuk senyawa sederhana: NaCl
+  - Untuk senyawa dengan jumlah atom lebih dari satu: H2O (untuk air), CO2 (karbon dioksida)
+- Gunakan huruf kapital dan angka dengan benar. Hindari penulisan seperti nacl, h2o, atau C o 2.
+""")
+        
+    rumus = st.text_input("Masukkan Rumus Kimia", placeholder="Contoh: H2O, NaCl, C6H12O6")
+
+    def hitung_massa_molar(rumus):
+        pattern = r'([A-Z][a-z]*)(\d*)'
+        elemen = re.findall(pattern, rumus)
+        massa_total = 0
+        for simbol, jumlah in elemen:
+            if simbol not in massa_atom:
+                return None, f"Unsur '{simbol}' tidak ditemukan dalam database."
+            n = int(jumlah) if jumlah else 1
+            massa_total += massa_atom[simbol] * n
+        return massa_total, None
+
+    if st.button("Hitung Massa Molar"):
+        if rumus.strip() == "":
+            st.warning("⚠️ Masukkan rumus terlebih dahulu.")
+        else:
+            hasil, error = hitung_massa_molar(rumus.strip())
+            if error:
+                st.error(error)
+            else:
+                st.success(f"Massa molar dari {rumus} adalah {hasil:.3f} g/mol")
+                
+    
+    st.info("Aplikasi ini belum mendukung input senyawa kimia yang mengandung tanda kurung, seperti: Fe(OH)3")                      
+   
+
+
 
 
 # =========================
@@ -255,5 +255,11 @@ Aplikasi ini dibuat untuk membantu pelajar memahami konsep dasar massa molar dan
 
 **Kekurangan** aplikasi ini adalah masih berada dalam tahap pengembangan dan penyempurnaan, sehingga beberapa fitur belum berfungsi secara optimal. Sebagai contoh, fitur perhitungan massa molar belum dapat menangani senyawa dengan struktur bercabang atau yang menggunakan tanda kurung seperti Fe(OH)₃ secara akurat.
 
-Dikembangkan menggunakan Python dan Streamlit.
+Dikembangkan oleh kelompok 7 kelas 1B, Prodi Analisis Kimia, Politeknik AKA Bogor. 
+TIM Pengembangan Aplikasi
+1. Amalia Rahmah Syafitri	
+2. Ghathfan Rifqi Triharto       	  	
+3. Mochammad Ghazy Al Gyfari 	
+4. Nuzulia Rahmatunnisa	 	
+5. Syalwa Fitriani			
 """)
