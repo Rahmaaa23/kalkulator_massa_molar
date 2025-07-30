@@ -135,7 +135,7 @@ Massa molar digunakan untuk:
 # =========================
 elif halaman == "🧬 Tabel Periodik":
     
-    st.info("klik unsur, scroll kebawah untung melihat massa atom relatif.")
+    st.info("klik unsur, scroll kebawah untuk melihat massa atom relatif.")
     st.markdown("""
     <h1 style='text-align: center; color: #2c3e50; font-family: Arial, sans-serif; margin-top: 10px;'>
     🔬 Tabel Periodik Unsur
