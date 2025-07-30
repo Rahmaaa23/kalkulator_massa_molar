@@ -1,6 +1,6 @@
 import streamlit as st
 import re
-
+from data_unsur import data_unsur
 # =========================
 # BACKGROUND
 # =========================
@@ -181,8 +181,8 @@ elif halaman == "🧬 Tabel Periodik":
 
     if st.session_state.selected:
         sim = st.session_state.selected
-        ar = massa_atom.get(sim, "Tidak ditemukan")
-        st.success(f"{sim} → Ar = {ar}")
+        info = data_unsur.get(sim, {"nama": "Tidak ditemukan", "massa": "?"})
+        st.success(f"**{sim} – {info['nama']}**\n\nMassa Atom (Ar): `{info['massa']}`")
         st.markdown(f"<h1 style='text-align: center; font-size: 80px;'>{sim}</h1>", unsafe_allow_html=True)
         
     st.markdown("### 🖼️ Referensi Gambar")
